@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khun San Wai — Full-Stack Developer</title>
+<meta name="description" content="쿤산웨이 (Khun San Wai) — 풀스택 개발자, 프론트엔드에 가장 큰 흥미를 가진 Full-Stack Developer Portfolio & Resume">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="grain"></div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav__brand">KSW<span class="nav__brand-dot">.</span></a>
+  <nav class="nav__links">
+    <a href="#about">소개</a>
+    <a href="#skills">기술</a>
+    <a href="#projects">프로젝트</a>
+    <a href="#aspiration">포부</a>
+    <a href="#contact">연락처</a>
+  </nav>
+  <div class="nav__downloads">
+    <a href="portfolio.pdf" download class="nav__cta nav__cta--secondary">포트폴리오</a>
+    <a href="resume.pdf" download class="nav__cta">이력서</a>
+  </div>
+  <button class="nav__burger" id="navBurger" aria-label="메뉴 열기" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">소개</a>
+  <a href="#skills">기술</a>
+  <a href="#projects">프로젝트</a>
+  <a href="#aspiration">포부</a>
+  <a href="#contact">연락처</a>
+  <a href="portfolio.pdf" download class="mobile-menu__cta">포트폴리오 다운로드</a>
+  <a href="resume.pdf" download class="mobile-menu__cta">이력서 다운로드</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__blob hero__blob--a" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--b" aria-hidden="true"></div>
+    <div class="hero__text">
+      <p class="eyebrow hero__in" style="--d:0">Full-Stack Developer</p>
+      <h1 class="hero__title hero__in" style="--d:1">
+        안녕하세요,<br>
+        <span class="hero__name">쿤산웨이</span> 입니다.
+      </h1>
+      <p class="hero__desc hero__in" style="--d:2">
+        백엔드부터 프론트엔드까지 아우르는 풀스택 개발자입니다.<br>
+        그중에서도 화면에 생명을 불어넣는 <strong>프론트엔드</strong>에 가장 큰 흥미를 느낍니다.
+      </p>
+      <p class="hero__tagline hero__in" style="--d:2">"코드 한 줄 한 줄이 사용자를 위한 배려로 가득해야 한다"</p>
+      <div class="hero__actions hero__in" style="--d:3">
+        <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
+        <a href="#contact" class="btn btn--ghost">연락하기</a>
+      </div>
+    </div>
+
+    <div class="hero__code hero__in" style="--d:2" aria-hidden="true">
+      <div class="code-window">
+        <div class="code-window__bar">
+          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+          <span class="code-window__title">developer.js</span>
+        </div>
+        <pre class="code-window__body"><code id="typedCode"></code><span class="cursor">▌</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section__head reveal">
+      <p class="eyebrow"><span class="bracket" aria-hidden="true"></span>Part 1</p>
+      <h2>프로필</h2>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__card reveal">
+        <div class="avatar">
+          <img src="profile.jpg" alt="쿤산웨이 프로필 사진">
+        </div>
+        <h3>쿤산웨이 <span class="about__en">Khun San Wai</span></h3>
+        <ul class="about__meta">
+          <li><span>국적</span>미얀마</li>
+          <li><span>생년월일</span><em class="placeholder">생년월일을 입력하세요</em></li>
+          <li><span>전화번호</span><em class="placeholder">전화번호를 입력하세요</em></li>
+          <li><span>학력</span>영진전문대학교 컴퓨터정보계열 (졸업예정, 2026.02)</li>
+          <li><span>이메일</span><a href="mailto:khunsanwai200@gmail.com">khunsanwai200@gmail.com</a></li>
+          <li><span>GitHub</span><a href="https://github.com/khunsanwai" target="_blank" rel="noopener">github.com/khunsanwai</a></li>
+        </ul>
+      </div>
+
+      <div class="about__story reveal">
+        <p>
+          미얀마에서 태어나 자라며 코딩이나 컴퓨터 관련 교육은 받아본 적 없이 일반적인 학업만 이어왔습니다.
+          한국에 오게 된 것은 새로운 기회에 대한 도전 정신에서 비롯되었고, 1년간 한국어 어학당에서 언어와
+          문화를 익히는 과정에서 다양한 기술 분야를 접하게 되었습니다. 그중에서도 홈페이지를 디자인하고
+          꾸미는 일에 큰 매력을 느꼈고, 시각적 요소와 사용자 인터페이스를 직접 구현할 수 있는 프론트엔드
+          개발이라는 분야로 자연스럽게 나아가게 되었습니다.
+        </p>
+        <p>
+          이후 영진전문대학교 소프트웨어·AI빅데이터 전공에서 웹 개발의 기초부터 체계적으로 배웠습니다.
+          처음에는 모든 것이 낯설고 어렵게 느껴졌지만, HTML의 구조를 이해하고 CSS로 스타일을 입혀가는
+          과정에서 뚜렷한 성취감을 느꼈습니다. 특히 JavaScript와 React를 활용해 정적인 페이지에 생동감을
+          불어넣으며 사용자와 상호작용하는 동적 UI를 직접 구현해 나가는 과정에서 프론트엔드 개발의 깊이와
+          가능성에 빠져들게 되었습니다. 레이아웃의 균형, 색상의 조화, 타이포그래피의 가독성 같은 세세한
+          요소를 조정하며 하나의 웹 페이지가 완성되어 가는 과정 자체가 예술작품을 만들어가는 것 같다는
+          느낌을 받았습니다.
+        </p>
+        <p>
+          더불어 Android 앱 개발 수업을 통해 모바일 인터페이스 설계 경험도 쌓았습니다. 작은 화면에서
+          정보를 효과적으로 배치하고 터치 인터랙션을 고려한 사용자 흐름을 설계하는 일은 웹과는 또 다른
+          매력이 있었고, 이 경험은 디바이스와 플랫폼에 구애받지 않고 유연하게 대응할 수 있는 튼튼한
+          기반이 되었습니다. 처음 접하는 환경과 기술에도 두려움보다는 호기심을 가지고 도전하며 하나씩
+          실력을 쌓아온 이 배경은, 빠르게 변화하는 프론트엔드 개발 분야에서도 끊임없이 학습하고 적응하는
+          자신감으로 이어지고 있습니다.
+        </p>
+        <p class="quote">
+          "코드 한 줄 한 줄이 사용자를 위한 배려로 가득해야 한다" — 퐁퐁파피 프로젝트를 통해 얻은 개발 철학입니다.
+        </p>
+      </div>
+    </div>
+
+    <div class="scholarship reveal">
+      <div class="scholarship__card">
+        <div class="scholarship__badge">GKS</div>
+        <div class="scholarship__body">
+          <div class="scholarship__top">
+            <h3>GKS 정부초청 외국인장학생</h3>
+            <span class="scholarship__period">2023 – 2025</span>
+          </div>
+          <p>
+            건양대학교 한국어 어학당 1년과 영진전문대학교 전문학사 과정 3년, 총 4년 중 3년간 GKS
+            장학금을 받았습니다. 한국어 5급을 취득한 마지막 학년 1학기에는 장학금 70%를 받았고,
+            해당 학기 성적은 4.5점 만점에 <strong>GPA 4.5</strong>를 기록했습니다. 이 성적 덕분에
+            2학기는 별도의 학비 부담 없이 다닐 수 있었습니다.
+          </p>
+          <div class="scholarship__stats">
+            <div class="scholarship__stat"><b>3년</b><span>수혜 기간</span></div>
+            <div class="scholarship__stat"><b>70%</b><span>장학금 비율</span></div>
+            <div class="scholarship__stat"><b>4.5 / 4.5</b><span>해당 학기 GPA</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu reveal">
+      <div class="edu__row">
+        <span class="edu__period">2022.02 – 2026.02</span>
+        <span class="edu__name">영진전문대학교 · 컴퓨터정보계열 (AI빅데이터 / 보안게임)</span>
+        <span class="edu__tag edu__tag--now">졸업예정 · 재학중</span>
+      </div>
+      <div class="edu__row">
+        <span class="edu__period">2021.03 – 2022.02</span>
+        <span class="edu__name">건양대학교 · 한국어 어학당</span>
+        <span class="edu__tag">수료</span>
+      </div>
+    </div>
+
+    <div class="lang-chart reveal">
+      <p class="lang-chart__label">4개 언어 구사 능력</p>
+      <div class="lang-chart__body">
+        <svg class="lang-rings" viewBox="0 0 220 220" role="img" aria-label="언어별 구사 능력 도넛 차트">
+          <circle class="lang-track" cx="110" cy="110" r="88"/>
+          <circle class="lang-track" cx="110" cy="110" r="66"/>
+          <circle class="lang-track" cx="110" cy="110" r="44"/>
+          <circle class="lang-track" cx="110" cy="110" r="22"/>
+
+          <circle class="lang-ring" cx="110" cy="110" r="88" data-value="95" style="stroke:var(--gold-bright)" transform="rotate(-90 110 110)"/>
+          <circle class="lang-ring" cx="110" cy="110" r="66" data-value="60" style="stroke:var(--gold)" transform="rotate(-90 110 110)"/>
+          <circle class="lang-ring" cx="110" cy="110" r="44" data-value="40" style="stroke:var(--forest)" transform="rotate(-90 110 110)"/>
+          <circle class="lang-ring" cx="110" cy="110" r="22" data-value="40" style="stroke:var(--ink-soft)" transform="rotate(-90 110 110)"/>
+
+          <text x="110" y="106" class="lang-rings__num">4</text>
+          <text x="110" y="124" class="lang-rings__caption">Languages</text>
+        </svg>
+
+        <ul class="lang-legend">
+          <li>
+            <span class="lang-legend__dot" style="background:var(--gold-bright)"></span>
+            <span class="lang-legend__name">한국어</span>
+            <span class="lang-legend__level">5급 · 고급</span>
+            <span class="lang-legend__pct">95%</span>
+          </li>
+          <li>
+            <span class="lang-legend__dot" style="background:var(--gold)"></span>
+            <span class="lang-legend__name">영어</span>
+            <span class="lang-legend__level">중급</span>
+            <span class="lang-legend__pct">60%</span>
+          </li>
+          <li>
+            <span class="lang-legend__dot" style="background:var(--forest)"></span>
+            <span class="lang-legend__name">일본어</span>
+            <span class="lang-legend__level">중급</span>
+            <span class="lang-legend__pct">40%</span>
+          </li>
+          <li>
+            <span class="lang-legend__dot" style="background:var(--ink-soft)"></span>
+            <span class="lang-legend__name">태국어</span>
+            <span class="lang-legend__level">중급</span>
+            <span class="lang-legend__pct">40%</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section__head reveal" style="margin-top: 56px;">
+      <p class="eyebrow"><span class="bracket" aria-hidden="true"></span>성격의 장단점</p>
+      <h2 style="font-size: clamp(1.4rem, 2.4vw, 1.9rem);">몰입하는 강점, 협업으로 다듬는 약점</h2>
+    </div>
+
+    <div class="strengths reveal">
+      <div class="strength">
+        <span class="strength__mark">몰입력과 성실함</span>
+        <p>한국에 오기 전까지는 프로그래밍을 접해본 적이 없었지만, 한번 흥미를 느끼기 시작하면 스스로
+        공부하며 깊이 탐구하는 성격입니다. React나 Git처럼 정규 수업에서 다루지 않은 도구도 실제 팀
+        프로젝트에 필요해지자 혼자 인터넷 자료와 공식 문서를 찾아가며 익혔고, 이 덕분에 React 기반
+        웹사이트 제작은 물론 React Native 앱 개발까지 수행할 수 있었습니다. 어떤 기술이든 직접 다뤄보고
+        화면 위에 결과를 만들어내는 과정에서 시간 가는 줄 모를 만큼 집중하며, 가끔은 밥 먹는 시간조차
+        잊고 몰입할 정도입니다. 이러한 몰입력과 성실함이 개발자로서 저의 가장 큰 강점이라고 생각합니다.</p>
+      </div>
+      <div class="strength">
+        <span class="strength__mark">다양한 언어·문화 감각</span>
+        <p>미얀마에서 자라 한국에 와서 새로운 환경에 적응했고, 한국어도 현재 5급 수준으로 능숙하게
+        사용합니다. 영어는 중간 수준으로 소통 가능하며, 일본어와 태국어도 기초부터 배우며 꾸준히 공부를
+        이어가고 있습니다. 여러 언어를 배우고 사용한 경험은 다양한 문화적 배경을 가진 사람들과 원활하게
+        소통할 수 있는 기반이 되었고, 사용자 중심의 서비스를 기획하거나 협업을 진행할 때에도 강점이 될
+        것이라 생각합니다. 특히 글로벌 서비스를 운영하는 기업에서는 이러한 언어 감각과 문화 이해 능력이
+        더욱 빛을 발할 수 있다고 확신합니다.</p>
+      </div>
+      <div class="strength strength--growth">
+        <span class="strength__mark">성장 중인 부분 — 협업으로 다듬는 중</span>
+        <p>다른 사람에게 피해를 주는 것을 지나치게 걱정하는 편입니다. 실수를 하거나 부담을 주는 상황을
+        두려워해 혼자서 모든 것을 해결하려 했던 적이 많았습니다. 하지만 팀 프로젝트와 협업 과정을
+        반복하면서 '함께 하는 것'의 가치를 깨닫고, 어려움이 있을 때는 솔직하게 공유하고 도움을 요청하는
+        법을 배우고 있습니다. 이제는 팀의 조화를 고려하면서도 제 의견을 말하고 조율할 수 있게 되었으며,
+        협업 능력도 꾸준히 발전하고 있습니다. 몰입력과 자기주도적 학습 태도를 바탕으로 계속 성장하며,
+        이 부분은 협업과 소통을 통해 극복해 조직에 긍정적인 영향을 주는 개발자로 나아가고자 합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section--tint" id="skills">
+    <div class="section__head reveal">
+      <p class="eyebrow"><span class="bracket" aria-hidden="true"></span>Part 2</p>
+      <h2>사용 가능 기술</h2>
+    </div>
+
+    <div class="skills reveal">
+      <div class="skills__group">
+        <h3>Frontend</h3>
+        <div class="chips">
+          <span class="chip">React</span>
+          <span class="chip">React Native</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS</span>
+        </div>
+      </div>
+      <div class="skills__group">
+        <h3>Backend</h3>
+        <div class="chips">
+          <span class="chip">Java</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">Python</span>
+          <span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="skills__group">
+        <h3>Database</h3>
+        <div class="chips">
+          <span class="chip">MySQL</span>
+          <span class="chip">Oracle</span>
+          <span class="chip">Redis</span>
+          <span class="chip">Elasticsearch</span>
+        </div>
+      </div>
+      <div class="skills__group">
+        <h3>Tools &amp; ETC</h3>
+        <div class="chips">
+          <span class="chip">Git</span>
+          <span class="chip">GitHub</span>
+          <span class="chip">VS Code</span>
+          <span class="chip">Android Studio</span>
+          <span class="chip">IntelliJ</span>
+          <span class="chip">Figma</span>
+          <span class="chip">Docker</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section__head reveal">
+      <p class="eyebrow"><span class="bracket" aria-hidden="true"></span>Part 3</p>
+      <h2>개발 실적</h2>
+      <p class="section__sub">각 프로젝트의 <strong>›</strong> 를 누르면 기획 배경, 기술 스택, 주요 기능을 자세히 볼 수 있습니다.
+      GitHub · 라이브 데모 링크는 실제 배포 주소로 교체해 주세요.</p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- 01 Food App -->
+      <article class="case reveal" data-case="1">
+        <button class="case__head" aria-expanded="false" aria-controls="case-detail-1">
+          <span class="case__index">01</span>
+          <span class="case__title-group">
+            <span class="case__top-row">
+              <h3>Food App</h3>
+              <span class="case__period">2024.11 · 개인 프로젝트</span>
+            </span>
+            <span class="case__summary">사용자가 메뉴를 탐색하고 장바구니에 담아 주문하는 음식 주문 통합 관리 앱</span>
+            <div class="chips chips--sm">
+              <span class="chip">Android Studio</span><span class="chip">Java</span><span class="chip">Firebase</span><span class="chip">XML</span>
+            </div>
+          </span>
+          <span class="case__chevron" aria-hidden="true">›</span>
+        </button>
+        <div class="case__detail" id="case-detail-1">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>개발 기간 · 2024.11 ~ 2024.11</span>
+              <span>개발 인원 · 개인 프로젝트</span>
+              <span>담당 파트 · 풀스택 (Firebase, 백엔드/프론트엔드)</span>
+            </div>
+            <div class="case__block">
+              <h4>기획 배경</h4>
+              <p>배달 서비스와 외식 문화가 빠르게 확산되면서 여러 앱을 오가며 메뉴를 비교·주문해야 하는
+              불편함이 있었습니다. 이를 해결하고자 한눈에 메뉴를 탐색하고 손쉽게 주문을 완료할 수 있는
+              통합 음식 주문 관리 시스템을 기획했습니다. 복잡한 주문 절차를 단순화하고, 실시간 데이터
+              동기화로 빠르고 직관적인 주문 경험을 제공하는 것을 목표로 했습니다.</p>
+            </div>
+            <div class="case__block">
+              <h4>기술 스택</h4>
+              <ul class="case__stack">
+                <li><b>개발 환경</b> Android Studio</li>
+                <li><b>언어</b> Java</li>
+                <li><b>UI</b> XML Layout</li>
+                <li><b>데이터베이스</b> Firebase Realtime Database</li>
+                <li><b>아키텍처</b> MVC Layout</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>주요 기능</h4>
+              <ul class="case__features">
+                <li>메뉴 목록 조회 및 상세 정보(가격·설명·이미지) 확인</li>
+                <li>장바구니 담기 · 수정 · 삭제</li>
+                <li>Firebase Realtime Database 기반 실시간 주문 저장</li>
+                <li>주문 내역 조회로 편리한 재주문</li>
+              </ul>
+            </div>
+            <div class="case__links">
+              <a href="#" class="case__link">GitHub ↗</a>
+              <a href="#" class="case__link case__link--placeholder">라이브 데모 링크 추가 ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 퐁퐁파피 -->
+      <article class="case reveal" data-case="2">
+        <button class="case__head" aria-expanded="false" aria-controls="case-detail-2">
+          <span class="case__index">02</span>
+          <span class="case__title-group">
+            <span class="case__top-row">
+              <h3>퐁퐁파피</h3>
+              <span class="case__period">2024.12 · 개인 프로젝트</span>
+            </span>
+            <span class="case__summary">반려견 미용·케어 예약과 공지 확인이 가능한 반려동물 관리 웹사이트</span>
+            <div class="chips chips--sm">
+              <span class="chip">HTML5</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+            </div>
+          </span>
+          <span class="case__chevron" aria-hidden="true">›</span>
+        </button>
+        <div class="case__detail" id="case-detail-2">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>개발 기간 · 2024.12 ~ 2024.12</span>
+              <span>개발 인원 · 개인 프로젝트</span>
+              <span>담당 파트 · 기획·디자인·프론트엔드 전 과정</span>
+            </div>
+            <div class="case__block">
+              <h4>기획 배경</h4>
+              <p>반려동물을 키우는 사람들이 미용·건강 관리·공지 확인을 편리하고 직관적으로 이용할 수 있는
+              플랫폼의 필요성에서 출발했습니다. 특히 모바일 환경에서의 접근성과 사용성을 개선하고자,
+              사용자 친화적인 UI와 따뜻한 디자인을 바탕으로 반려견 서비스를 예약하고 정보를 확인할 수 있는
+              웹사이트를 직접 기획부터 배포까지 진행했습니다.</p>
+            </div>
+            <div class="case__block">
+              <h4>기술 스택</h4>
+              <ul class="case__stack">
+                <li><b>개발 환경</b> VS Code</li>
+                <li><b>언어</b> HTML, CSS, JavaScript</li>
+                <li><b>스타일링/레이아웃</b> Flexbox, Grid, 반응형 웹 설계, transition·keyframes 애니메이션</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>주요 기능</h4>
+              <ul class="case__features">
+                <li>예약 기능 — 미용·케어 서비스 예약, 예약 내역 확인 및 취소</li>
+                <li>정보 제공 — 공지사항·이벤트·반려동물 관련 소식</li>
+                <li>사용자 편의 — 직관적 UI와 반응형 웹으로 데스크톱·모바일 모두 대응</li>
+              </ul>
+            </div>
+            <div class="case__links">
+              <a href="https://github.com/khunsanwai/pongpongpuppy" target="_blank" rel="noopener" class="case__link">GitHub ↗</a>
+              <a href="https://khunsanwai.github.io/pongpongpuppy" target="_blank" rel="noopener" class="case__link">Live Demo ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 미니도서관 -->
+      <article class="case reveal" data-case="3">
+        <button class="case__head" aria-expanded="false" aria-controls="case-detail-3">
+          <span class="case__index">03</span>
+          <span class="case__title-group">
+            <span class="case__top-row">
+              <h3>미니도서관</h3>
+              <span class="case__period">2025.06 · 개인 프로젝트</span>
+            </span>
+            <span class="case__summary">관리자·사용자 권한을 분리한 도서 검색·대출·반납 웹 애플리케이션</span>
+            <div class="chips chips--sm">
+              <span class="chip">React</span><span class="chip">Spring Boot</span><span class="chip">MySQL</span>
+            </div>
+          </span>
+          <span class="case__chevron" aria-hidden="true">›</span>
+        </button>
+        <div class="case__detail" id="case-detail-3">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>개발 기간 · 2025.06 ~ 2025.06</span>
+              <span>개발 인원 · 개인 프로젝트</span>
+              <span>담당 파트 · 풀스택 (DB, 백엔드/프론트엔드)</span>
+            </div>
+            <div class="case__block">
+              <h4>기획 배경</h4>
+              <p>많은 도서관이 여전히 수기로 대출·반납을 기록하거나 제한적인 검색 기능만 제공해, 원하는
+              도서를 찾는 데 시간이 걸리고 관리자가 도서·회원 정보를 체계적으로 관리하기 어려운 문제가
+              있었습니다. 관리자와 일반 사용자의 역할을 명확히 분리하고, 직관적인 검색과 실시간 대출·반납
+              기능으로 도서 관리 과정을 간소화하고자 기획했습니다.</p>
+            </div>
+            <div class="case__block">
+              <h4>기술 스택</h4>
+              <ul class="case__stack">
+                <li><b>Frontend</b> React, JavaScript, CSS</li>
+                <li><b>Backend</b> Spring Boot</li>
+                <li><b>Database</b> MySQL</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>주요 기능</h4>
+              <ul class="case__features">
+                <li>관리자 — 도서 등록·수정·삭제·목록 조회, 회원 정보 관리, 대출/반납 현황 확인</li>
+                <li>사용자 — 제목·저자·카테고리별 도서 검색, 대출·반납, 대출 내역 확인</li>
+                <li>실시간 유효성 검증 및 대출 가능 여부·반납 기한 안내</li>
+              </ul>
+            </div>
+            <div class="case__links">
+              <a href="#" class="case__link">GitHub ↗</a>
+              <a href="#" class="case__link case__link--placeholder">라이브 데모 링크 추가 ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 GoodsMoa -->
+      <article class="case reveal" data-case="4">
+        <button class="case__head" aria-expanded="false" aria-controls="case-detail-4">
+          <span class="case__index">04</span>
+          <span class="case__title-group">
+            <span class="case__top-row">
+              <h3>GoodsMoa</h3>
+              <span class="case__period">2025.02 – 2025.07 · 팀 프로젝트 (7명) · 캡스톤 디자인</span>
+            </span>
+            <span class="case__summary">굿즈 등록·거래, 커미션, 실시간 채팅까지 지원하는 올인원 굿즈 거래 플랫폼</span>
+            <div class="chips chips--sm">
+              <span class="chip">React</span><span class="chip">Spring Boot</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">Docker</span>
+            </div>
+          </span>
+          <span class="case__chevron" aria-hidden="true">›</span>
+        </button>
+        <div class="case__detail" id="case-detail-4">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>개발 기간 · 2025.02 ~ 2025.07</span>
+              <span>개발 인원 · 팀 프로젝트 (7명)</span>
+              <span>담당 파트 · 프론트엔드 전반</span>
+            </div>
+            <div class="case__block">
+              <h4>기획 배경</h4>
+              <p>기존 굿즈 거래는 SNS·오픈채팅·중고마켓 등 비공식 채널에 분산되어 있어 원하는 정보를
+              효율적으로 탐색하거나 거래 내역을 체계적으로 관리하기 어려웠고, 사기·허위 등록 위험도
+              높았습니다. 굿즈 거래에 특화된 통합 플랫폼을 구축해 창작자와 구매자가 안전하고 체계적으로
+              거래할 수 있도록 기획했습니다.</p>
+            </div>
+            <div class="case__block">
+              <h4>기술 스택</h4>
+              <ul class="case__stack">
+                <li><b>Frontend</b> React, JavaScript, CSS</li>
+                <li><b>Backend</b> Spring Boot, JUnit</li>
+                <li><b>Database</b> MySQL, Redis, Elasticsearch</li>
+                <li><b>ETC</b> Docker, GitHub, Figma</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>주요 기능</h4>
+              <ul class="case__features">
+                <li>카테고리 필터링·검색·해시태그로 원하는 굿즈 빠르게 탐색</li>
+                <li>좋아요(찜)·실시간 채팅을 통한 가격 조정 및 상담</li>
+                <li>장바구니와 토스페이먼츠 연동 간편 결제</li>
+                <li>다중 상품 등록, 판매기간·공개범위·배송방법 설정이 가능한 굿즈 등록</li>
+                <li>커미션 등록/신청 및 수락·거절 상태 관리</li>
+                <li>useState·useEffect·Context API 기반 실시간 상태 관리 UI</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>문제 해결 경험</h4>
+              <p>프론트엔드 담당을 맡았지만 React는 정규 수업에서 다루지 않아 완전히 새로운 도전이었습니다.
+              초반에는 컴포넌트 구조와 상태 관리 개념이 어려웠고 오류도 자주 발생했지만, 문제가 생길
+              때마다 구글링과 공식 문서 확인, 오픈소스 분석으로 직접 해결책을 찾고 팀원들과 공유하며
+              함께 성장했습니다. CSS 구조를 정리해 반응형 UI를 적용하고, Git으로 작업을 효율적으로
+              관리하며 실무에 가까운 개발 프로세스를 체험했습니다. 프로젝트를 마무리했을 때는 기술을
+              익혔다는 성취를 넘어, 스스로 학습하고 문제를 해결하는 능력과 협업의 중요성을 깊이
+              체감할 수 있었고, 이는 개발자로서 자신감을 심어준 소중한 계기가 되었습니다.</p>
+            </div>
+            <div class="case__links">
+              <a href="#" class="case__link">GitHub ↗</a>
+              <a href="#" class="case__link case__link--placeholder">라이브 데모 링크 추가 ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 New You -->
+      <article class="case reveal" data-case="5">
+        <button class="case__head" aria-expanded="false" aria-controls="case-detail-5">
+          <span class="case__index">05</span>
+          <span class="case__title-group">
+            <span class="case__top-row">
+              <h3>New You</h3>
+              <span class="case__period">2025.09 – 2025.10 · 개인 프로젝트 · 캡스톤 디자인</span>
+            </span>
+            <span class="case__summary">일정 관리와 소셜 네트워킹을 결합한 라이프스타일 관리 앱</span>
+            <div class="chips chips--sm">
+              <span class="chip">React Native</span><span class="chip">Spring Boot</span><span class="chip">MySQL</span>
+            </div>
+          </span>
+          <span class="case__chevron" aria-hidden="true">›</span>
+        </button>
+        <div class="case__detail" id="case-detail-5">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>개발 기간 · 2025.09 ~ 2025.10</span>
+              <span>개발 인원 · 개인 프로젝트</span>
+              <span>담당 파트 · 풀스택 (DB, 백엔드/프론트엔드)</span>
+            </div>
+            <div class="case__block">
+              <h4>기획 배경</h4>
+              <p>기존 일정 관리 앱은 개인 중심으로 설계되어 친구와의 일정 공유나 협업 기능이 부족했습니다.
+              일정 관리와 소셜 네트워킹의 경계를 허무는 통합 라이프스타일 플랫폼을 목표로, 친구의 생일
+              알림과 선물 리마인더, 시간표 공유, 실시간 채팅을 통해 일정 기반의 자연스러운 소통 경험을
+              제공하고자 기획했습니다.</p>
+            </div>
+            <div class="case__block">
+              <h4>기술 스택</h4>
+              <ul class="case__stack">
+                <li><b>Frontend</b> React Native, JavaScript, CSS</li>
+                <li><b>Backend</b> Spring Boot</li>
+                <li><b>Database</b> MySQL</li>
+                <li><b>ETC</b> VS Code, GitHub, Figma</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>주요 기능</h4>
+              <ul class="case__features">
+                <li>스마트 생일 알림 — 친구 생일에 자동 알림과 선물 준비 리마인더 제공</li>
+                <li>통합 시간표 — 개인 일정과 온라인 수업 일정을 한 화면에서 관리</li>
+                <li>시간표 공유 &amp; 오버레이 뷰 — 친구와 일정을 겹쳐보며 공통 자유 시간대 확인</li>
+                <li>실시간 그룹 채팅 — 채팅 중 약속 시간을 바로 일정으로 등록</li>
+              </ul>
+            </div>
+            <div class="case__links">
+              <a href="#" class="case__link">GitHub ↗</a>
+              <a href="#" class="case__link case__link--placeholder">라이브 데모 링크 추가 ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ASPIRATION -->
+  <section class="section section--dark" id="aspiration">
+    <div class="section__head reveal">
+      <p class="eyebrow eyebrow--light"><span class="bracket bracket--light" aria-hidden="true"></span>Part 4</p>
+      <h2>입사 후 포부</h2>
+    </div>
+
+    <p class="aspiration__lede reveal">"사용자 중심의 프론트엔드 실무 개발자, 디테일을 사로잡는 경험을 설계하겠습니다."</p>
+
+    <p class="aspiration__intro reveal">
+      프론트엔드 개발의 핵심은 단순한 기능 구현이 아니라, 기술을 통해 사용자의 감정과 행동을 설계하는
+      것이라고 믿습니다. '퐁퐁파피' 프로젝트를 진행하며 CSS의 한 픽셀, 색상의 선택, 여백의 활용 하나가
+      전체 사용자 경험에 미치는 영향을 체감했고, 'New You' 프로젝트를 통해서는 복잡한 기능들을 모바일
+      환경에서 직관적으로 통합하며 사용자 흐름을 설계하는 능력을 키웠습니다. 세심한 디자인 감각과 기술적
+      구현력을 바탕으로 실질적인 가치를 더할 수 있는 곳에서 일하고 싶습니다.
+    </p>
+
+    <div class="pillars reveal">
+      <div class="pillar">
+        <span class="pillar__num">1</span>
+        <h3>끝까지 책임지는 개발자</h3>
+        <p>기능 구현에 그치지 않고, 그 결과가 사용자에게 어떤 영향을 미치는지까지 고민하며 완성도를
+        높입니다. 오류 하나, 디자인 어긋남 하나도 가볍게 넘기지 않고 끝까지 점검하겠습니다.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar__num">2</span>
+        <h3>팀과 함께 성장하는 동료</h3>
+        <p>개인의 성과보다 팀 전체의 성장을 중요하게 생각합니다. 제 의견만 고집하지 않고 팀의 방향을
+        우선하며, 지식을 공유해 함께 배우고 성장하는 문화를 만들어가겠습니다.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar__num">3</span>
+        <h3>배움을 실천으로 옮기는 전문가</h3>
+        <p>빠르게 변화하는 IT 환경에서 새로운 기술과 도구에 대한 학습을 게을리하지 않고, 이를 실제
+        업무의 생산성과 사용성으로 증명하는 개발자가 되겠습니다.</p>
+      </div>
+    </div>
+
+    <div class="term-goals reveal">
+      <div class="term-goal">
+        <h3>단기 포부</h3>
+        <p>입사 후 가장 먼저 팀의 개발 문화와 프로세스에 빠르게 적응하겠습니다. 코드 리뷰를 통해 동료의
+        시선에서 코드를 바라보는 법을 배우고, ESLint·Prettier 같은 도구로 코드 일관성과 품질 유지에
+        기여하겠습니다. 디자인 시스템을 충실히 이해하고 재사용 가능한 컴포넌트를 꼼꼼히 구현해 팀의
+        개발 생산성 향상에 기여하는 것을 1차 목표로 삼겠습니다. 아직 상용 프로젝트에 적용해보지 못한
+        CI/CD 환경도 적극적으로 학습해 배포 프로세스에 빨리 숙달되도록 하겠습니다.</p>
+      </div>
+      <div class="term-goal">
+        <h3>장기 포부</h3>
+        <p>장기적으로는 구현을 넘어 사용자 데이터와 피드백을 분석해 비즈니스 문제를 발견하고 해결 방안을
+        제안할 수 있는 주도적인 개발자로 성장하고 싶습니다. 웹과 앱을 아우르는 경험을 바탕으로 다양한
+        플랫폼에서 일관된 UX를 제공하는 데 기여하고, 개발 생산성과 사용자 만족도를 동시에 높이는
+        프론트엔드 아키텍처 개선에 주도적으로 나서겠습니다. 팀 내에서 기술적 논의를 촉진하고, 더 나은
+        개발 문화를 만드는 데 기여하는 동료가 되는 것이 저의 꿈입니다.</p>
+      </div>
+    </div>
+
+    <p class="aspiration__promise reveal">
+      한국에서의 언어 습득과 문화 적응 과정을 통해 다져진 도전 정신과 적응력은 저의 가장 큰 자산입니다.
+      새로운 기술과 변화하는 요구에 항상 열린 마음으로 학습하고 유연하게 대처하며, 사용자를 가장 먼저
+      생각하는 마음가짐을 잃지 않고 믿고 맡길 수 있는 책임감 있는 동료가 되도록 최선을 다하겠습니다.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="contact__inner reveal">
+      <h2>함께 일하고 싶습니다.</h2>
+      <p>사용자 중심의 프론트엔드 개발, 디테일을 사로잡는 경험을 설계하겠습니다.</p>
+      <div class="contact__actions">
+        <a href="mailto:khunsanwai200@gmail.com" class="btn btn--primary">이메일 보내기</a>
+        <a href="portfolio.pdf" download class="btn btn--ghost">포트폴리오 다운로드 (PDF)</a>
+        <a href="resume.pdf" download class="btn btn--ghost">이력서 다운로드 (PDF)</a>
+      </div>
+      <div class="contact__links">
+        <a href="https://github.com/khunsanwai" target="_blank" rel="noopener">GitHub</a>
+        <span>·</span>
+        <a href="mailto:khunsanwai200@gmail.com">khunsanwai200@gmail.com</a>
+        <span>·</span>
+        <em class="placeholder">전화번호를 입력하세요</em>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Khun San Wai. Built with HTML, CSS &amp; JavaScript.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
