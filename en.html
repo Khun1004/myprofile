@@ -8,15 +8,16 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://khun1004.github.io/myprofile/en.html">
 <meta property="og:title" content="Khun San Wai — Full-Stack Developer">
 <meta property="og:description" content="Full-Stack Developer with a strong passion for frontend. Portfolio & Resume.">
-<meta property="og:image" content="og-image.png">
+<meta property="og:image" content="https://khun1004.github.io/myprofile/og-image.png">
 <meta property="og:locale" content="en_US">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Khun San Wai — Full-Stack Developer">
 <meta name="twitter:description" content="Full-Stack Developer with a strong passion for frontend. Portfolio & Resume.">
-<meta name="twitter:image" content="og-image.png">
+<meta name="twitter:image" content="https://khun1004.github.io/myprofile/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -55,13 +56,17 @@
   <a href="#projects">Projects</a>
   <a href="#aspiration">Aspiration</a>
   <a href="#contact">Contact</a>
-  <div class="lang-switch lang-switch--mobile">
-    <a href="index.html" class="lang-switch__opt">한국어</a>
-    <a href="en.html" class="lang-switch__opt is-active">English</a>
-  </div>
   <a href="https://drive.google.com/file/d/1RlYbXV5lZJYIyP4whP8yq4pTDt5NAgDj/view?usp=drive_link" target="_blank" rel="noopener" class="mobile-menu__cta">View Portfolio</a>
   <a href="https://drive.google.com/file/d/1VwHbwUYpdU2KJXuNzdmgzzkbFXSUP88c/view?usp=drive_link" target="_blank" rel="noopener" class="mobile-menu__cta">View Resume</a>
 </div>
+
+<nav class="scroll-dots" aria-label="Jump to section">
+  <a href="#about" class="scroll-dot" data-dot="about" aria-label="Go to Profile"></a>
+  <a href="#skills" class="scroll-dot" data-dot="skills" aria-label="Go to Skills"></a>
+  <a href="#projects" class="scroll-dot" data-dot="projects" aria-label="Go to Projects"></a>
+  <a href="#aspiration" class="scroll-dot" data-dot="aspiration" aria-label="Go to Aspiration"></a>
+  <a href="#contact" class="scroll-dot" data-dot="contact" aria-label="Go to Contact"></a>
+</nav>
 
 <main id="top">
 
@@ -102,6 +107,31 @@
     </div>
   </section>
 
+  <!-- IMPACT STATS -->
+  <section class="stats-strip reveal" aria-label="Key stats">
+    <div class="stats-strip__inner">
+      <div class="stat-block">
+        <span class="stat-block__num">05</span>
+        <span class="stat-block__label">Projects</span>
+      </div>
+      <div class="stats-strip__divider" aria-hidden="true"></div>
+      <div class="stat-block">
+        <span class="stat-block__num">04</span>
+        <span class="stat-block__label">Languages</span>
+      </div>
+      <div class="stats-strip__divider" aria-hidden="true"></div>
+      <div class="stat-block">
+        <span class="stat-block__num">03</span>
+        <span class="stat-block__label">Yrs GKS Scholar</span>
+      </div>
+      <div class="stats-strip__divider" aria-hidden="true"></div>
+      <div class="stat-block">
+        <span class="stat-block__num">4.5</span>
+        <span class="stat-block__label">Semester GPA</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="section__head reveal">
@@ -125,16 +155,17 @@
           <ul class="about__meta">
             <li><span>Nationality</span>Myanmar</li>
             <li><span>Gender</span>Male</li>
-            <li><span>Date of Birth</span><em class="placeholder">Enter your date of birth</em></li>
-            <li><span>Address</span><em class="placeholder">Enter your address</em></li>
-            <li><span>Phone</span><em class="placeholder">Enter your phone number</em></li>
-            <li><span>Education</span>Yeungjin College, Dept. of Computer Information (Expected graduation, Feb 2027)</li>
+            <li><span>Date of Birth</span>Apr 10, 2000</li>
+            <li><span>Address</span>361-24, Bokhyeon-dong, Buk-gu, Daegu, South Korea</li>
+            <li><span>Phone</span><a href="tel:010-2017-1042">010-2017-1042</a></li>
+            <li><span>Education</span>Yeungjin University, Dept. of Computer Information (Expected graduation, Feb 2027)</li>
             <li><span>Email</span><a href="mailto:khunsanwai200@gmail.com">khunsanwai200@gmail.com</a></li>
           </ul>
         </div>
       </div>
 
       <div class="about__story reveal">
+        <p class="about-subhead">Growth, Driven by Passion</p>
         <p>
           I was born and raised in Myanmar with no prior exposure to coding or computers — just general
           academic study. Coming to Korea grew out of a spirit of adventure and openness to new
@@ -145,7 +176,7 @@
         </p>
         <p>
           I then studied web development systematically from the ground up in the Software / AI Big Data
-          program at Yeungjin College. Everything felt unfamiliar at first, but understanding HTML's
+          program at Yeungjin University. Everything felt unfamiliar at first, but understanding HTML's
           structure and styling it with CSS gave me a clear sense of accomplishment. Using JavaScript and
           React to bring static pages to life — building dynamic UI that responds to the user — is where I
           fell into the depth and possibility of frontend development. Adjusting details like layout
@@ -176,7 +207,7 @@
             <span class="scholarship__period">2023 – 2025</span>
           </div>
           <p>
-            Across my time at Konyang University's Korean Language Institute and Yeungjin College's
+            Across my time at Konyang University's Korean Language Institute and Yeungjin University's
             associate degree program, I was selected for the Government Scholarship for International
             Students (GKS) for a total of 3 years, covering my tuition.
           </p>
@@ -191,7 +222,7 @@
         <div class="scholarship__badge scholarship__badge--school">2026</div>
         <div class="scholarship__body">
           <div class="scholarship__top">
-            <h3>Yeungjin College Merit Scholarship</h3>
+            <h3>Yeungjin University Merit Scholarship</h3>
             <span class="scholarship__period">2026, Semester 1</span>
           </div>
           <p>
@@ -212,12 +243,12 @@
     <div class="edu reveal">
       <div class="edu__row">
         <span class="edu__period">2026.02 – 2027.02</span>
-        <span class="edu__name">Yeungjin College · Dept. of Computer Information (AI Big Data · Software)</span>
+        <span class="edu__name">Yeungjin University · Dept. of Computer Information (AI Big Data · Software)</span>
         <span class="edu__tag edu__tag--now">Expected Graduation · Enrolled</span>
       </div>
       <div class="edu__row">
         <span class="edu__period">2022.02 – 2026.02</span>
-        <span class="edu__name">Yeungjin College · Dept. of Computer Information (AI Big Data · Software)</span>
+        <span class="edu__name">Yeungjin University · Dept. of Computer Information (AI Big Data · Software)</span>
         <span class="edu__tag">Associate Degree — Graduated</span>
       </div>
       <div class="edu__row">
@@ -281,6 +312,7 @@
 
     <div class="strengths reveal">
       <div class="strength">
+        <span class="strength__num">01</span>
         <span class="strength__mark">Focus &amp; Diligence</span>
         <p>I had never touched programming before coming to Korea, but once something catches my
         interest, I dig into it on my own. Tools like React and Git weren't covered in my formal
@@ -291,6 +323,7 @@
         developer.</p>
       </div>
       <div class="strength">
+        <span class="strength__num">02</span>
         <span class="strength__mark">Multilingual, Cross-Cultural Sense</span>
         <p>Growing up in Myanmar and adapting to a new environment in Korea, I now speak Korean fluently
         at Level 5. I can also communicate in English at an intermediate level, and I'm steadily building
@@ -300,6 +333,7 @@
         and cultural understanding would be especially valuable at a company with a global footprint.</p>
       </div>
       <div class="strength strength--growth">
+        <span class="strength__num">03</span>
         <span class="strength__mark">Growth Area — Refined Through Collaboration</span>
         <p>I tend to worry excessively about inconveniencing others. Afraid of making mistakes or being a
         burden, I often tried to handle everything on my own. Through repeated team projects, though, I've
@@ -321,6 +355,8 @@
 
     <div class="skills reveal">
       <div class="skill-card skill-card--a">
+        <span class="skill-card__badge">MAIN</span>
+        <div class="skill-card__orb" aria-hidden="true"></div>
         <div class="skill-card__head">
           <span class="skill-card__num">01</span>
           <h3>Frontend</h3>
@@ -334,6 +370,7 @@
         </div>
       </div>
       <div class="skill-card skill-card--b">
+        <div class="skill-card__orb" aria-hidden="true"></div>
         <div class="skill-card__head">
           <span class="skill-card__num">02</span>
           <h3>Backend</h3>
@@ -346,6 +383,7 @@
         </div>
       </div>
       <div class="skill-card skill-card--c">
+        <div class="skill-card__orb" aria-hidden="true"></div>
         <div class="skill-card__head">
           <span class="skill-card__num">03</span>
           <h3>Database</h3>
@@ -358,6 +396,7 @@
         </div>
       </div>
       <div class="skill-card skill-card--d">
+        <div class="skill-card__orb" aria-hidden="true"></div>
         <div class="skill-card__head">
           <span class="skill-card__num">04</span>
           <h3>Tools &amp; ETC</h3>
@@ -762,7 +801,7 @@
       <div class="contact__links">
         <a href="mailto:khunsanwai200@gmail.com">khunsanwai200@gmail.com</a>
         <span>·</span>
-        <em class="placeholder">Enter your phone number</em>
+        <a href="tel:010-2017-1042">010-2017-1042</a>
       </div>
     </div>
   </section>
@@ -770,7 +809,26 @@
 </main>
 
 <footer class="footer">
-  <p>&copy; <span id="year"></span> Khun San Wai. Built with HTML, CSS &amp; JavaScript.</p>
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <p class="footer__logo">KSW<span>.</span></p>
+      <p class="footer__tagline">A full-stack developer comfortable end-to-end, with the frontend closest to my heart.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#aspiration">Aspiration</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer__contact">
+      <a href="mailto:khunsanwai200@gmail.com">khunsanwai200@gmail.com</a>
+      <a href="tel:010-2017-1042">010-2017-1042</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; <span id="year"></span> Khun San Wai. Built with HTML, CSS &amp; JavaScript.</p>
+  </div>
 </footer>
 
 <script src="script.js"></script>

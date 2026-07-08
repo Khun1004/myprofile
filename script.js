@@ -190,9 +190,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- 7. Scroll-spy: underline the active nav link ---------- */
+  /* ---------- 7. Scroll-spy: underline the active nav link + scroll dots ---------- */
   const navEl = document.getElementById('nav');
   const navLinks = document.querySelectorAll('.nav__links a[href^="#"]');
+  const scrollDots = document.querySelectorAll('.scroll-dot');
   const spySections = Array.from(navLinks)
     .map(link => document.querySelector(link.getAttribute('href')))
     .filter(Boolean);
@@ -210,6 +211,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     navLinks.forEach(link => {
       link.classList.toggle('active', !!currentId && link.getAttribute('href') === '#' + currentId);
+    });
+    scrollDots.forEach(dot => {
+      dot.classList.toggle('active', !!currentId && dot.dataset.dot === currentId);
     });
   }
 
