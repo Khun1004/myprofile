@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khun San Wai — Full-Stack Developer</title>
 <meta name="description" content="쿤산웨이 (Khun San Wai) — 풀스택 개발자, 프론트엔드에 가장 큰 흥미를 가진 Full-Stack Developer Portfolio & Resume">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="쿤산웨이 (Khun San Wai) — Full-Stack Developer">
+<meta property="og:description" content="풀스택 개발자, 프론트엔드에 가장 큰 흥미를 가진 개발자의 포트폴리오">
+<meta property="og:image" content="og-image.png">
+<meta property="og:locale" content="ko_KR">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="쿤산웨이 (Khun San Wai) — Full-Stack Developer">
+<meta name="twitter:description" content="풀스택 개발자, 프론트엔드에 가장 큰 흥미를 가진 개발자의 포트폴리오">
+<meta name="twitter:image" content="og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -24,9 +36,13 @@
     <a href="#aspiration">포부</a>
     <a href="#contact">연락처</a>
   </nav>
+  <div class="lang-switch">
+    <a href="index.html" class="lang-switch__opt is-active">KO</a>
+    <a href="en.html" class="lang-switch__opt">EN</a>
+  </div>
   <div class="nav__downloads">
-    <a href="portfolio.pdf" download class="nav__cta nav__cta--secondary">포트폴리오</a>
-    <a href="resume.pdf" download class="nav__cta">이력서</a>
+    <a href="https://drive.google.com/file/d/1RlYbXV5lZJYIyP4whP8yq4pTDt5NAgDj/view?usp=drive_link" target="_blank" rel="noopener" class="nav__cta nav__cta--secondary">포트폴리오</a>
+    <a href="https://drive.google.com/file/d/1VwHbwUYpdU2KJXuNzdmgzzkbFXSUP88c/view?usp=drive_link" target="_blank" rel="noopener" class="nav__cta">이력서</a>
   </div>
   <button class="nav__burger" id="navBurger" aria-label="메뉴 열기" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -39,8 +55,12 @@
   <a href="#projects">프로젝트</a>
   <a href="#aspiration">포부</a>
   <a href="#contact">연락처</a>
-  <a href="portfolio.pdf" download class="mobile-menu__cta">포트폴리오 다운로드</a>
-  <a href="resume.pdf" download class="mobile-menu__cta">이력서 다운로드</a>
+  <div class="lang-switch lang-switch--mobile">
+    <a href="index.html" class="lang-switch__opt is-active">한국어</a>
+    <a href="en.html" class="lang-switch__opt">English</a>
+  </div>
+  <a href="https://drive.google.com/file/d/1RlYbXV5lZJYIyP4whP8yq4pTDt5NAgDj/view?usp=drive_link" target="_blank" rel="noopener" class="mobile-menu__cta">포트폴리오 보기</a>
+  <a href="https://drive.google.com/file/d/1VwHbwUYpdU2KJXuNzdmgzzkbFXSUP88c/view?usp=drive_link" target="_blank" rel="noopener" class="mobile-menu__cta">이력서 보기</a>
 </div>
 
 <main id="top">
@@ -50,19 +70,24 @@
     <div class="hero__blob hero__blob--a" aria-hidden="true"></div>
     <div class="hero__blob hero__blob--b" aria-hidden="true"></div>
     <div class="hero__text">
-      <p class="eyebrow hero__in" style="--d:0">Full-Stack Developer</p>
+      <p class="eyebrow-badge hero__in" style="--d:0"><span class="eyebrow-badge__dot"></span>Full-Stack Developer</p>
       <h1 class="hero__title hero__in" style="--d:1">
-        안녕하세요,<br>
-        <span class="hero__name">쿤산웨이</span> 입니다.
+        <span class="hero__hi">안녕하세요,</span><br>
+        <span class="hero__name">쿤산웨이
+          <svg class="hero__swash" viewBox="0 0 220 20" aria-hidden="true"><path d="M2 12C40 2 90 2 110 10C130 18 180 18 218 6" /></svg>
+        </span> 입니다.
       </h1>
       <p class="hero__desc hero__in" style="--d:2">
         백엔드부터 프론트엔드까지 아우르는 풀스택 개발자입니다.<br>
         그중에서도 화면에 생명을 불어넣는 <strong>프론트엔드</strong>에 가장 큰 흥미를 느낍니다.
       </p>
-      <p class="hero__tagline hero__in" style="--d:2">"코드 한 줄 한 줄이 사용자를 위한 배려로 가득해야 한다"</p>
+      <div class="hero__quote hero__in" style="--d:2">
+        <span class="hero__quote-mark" aria-hidden="true">“</span>
+        <p class="hero__tagline">코드 한 줄 한 줄이 사용자를 위한 배려로 가득해야 한다</p>
+      </div>
       <div class="hero__actions hero__in" style="--d:3">
-        <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
-        <a href="#contact" class="btn btn--ghost">연락하기</a>
+        <a href="#projects" class="btn btn--primary"><span>프로젝트 보기</span><i class="btn__arrow" aria-hidden="true">→</i></a>
+        <a href="#contact" class="btn btn--ghost"><span>연락하기</span></a>
       </div>
     </div>
 
@@ -86,18 +111,27 @@
 
     <div class="about__grid">
       <div class="about__card reveal">
-        <div class="avatar">
-          <img src="profile.jpg" alt="쿤산웨이 프로필 사진">
+        <div class="about__card-top">
+          <span class="about__corner about__corner--tl" aria-hidden="true"></span>
+          <span class="about__corner about__corner--tr" aria-hidden="true"></span>
         </div>
-        <h3>쿤산웨이 <span class="about__en">Khun San Wai</span></h3>
-        <ul class="about__meta">
-          <li><span>국적</span>미얀마</li>
-          <li><span>생년월일</span><em class="placeholder">생년월일을 입력하세요</em></li>
-          <li><span>전화번호</span><em class="placeholder">전화번호를 입력하세요</em></li>
-          <li><span>학력</span>영진전문대학교 컴퓨터정보계열 (졸업예정, 2026.02)</li>
-          <li><span>이메일</span><a href="mailto:khunsanwai200@gmail.com">khunsanwai200@gmail.com</a></li>
-          <li><span>GitHub</span><a href="https://github.com/khunsanwai" target="_blank" rel="noopener">github.com/khunsanwai</a></li>
-        </ul>
+        <div class="about__card-body">
+          <div class="avatar">
+            <img src="profile.jpg" alt="쿤산웨이 프로필 사진">
+          </div>
+          <h3>쿤산웨이</h3>
+          <span class="about__en">KHUN SAN WAI</span>
+          <div class="about__divider" aria-hidden="true"></div>
+          <ul class="about__meta">
+            <li><span>국적</span>미얀마</li>
+            <li><span>성별</span>남</li>
+            <li><span>생년월일</span><em class="placeholder">생년월일을 입력하세요</em></li>
+            <li><span>주소</span><em class="placeholder">주소를 입력하세요</em></li>
+            <li><span>전화번호</span><em class="placeholder">전화번호를 입력하세요</em></li>
+            <li><span>학력</span>영진전문대학교 컴퓨터정보계열 (졸업예정, 2027.02)</li>
+            <li><span>이메일</span><a href="mailto:khunsanwai200@gmail.com">khunsanwai200@gmail.com</a></li>
+          </ul>
+        </div>
       </div>
 
       <div class="about__story reveal">
@@ -131,34 +165,57 @@
       </div>
     </div>
 
-    <div class="scholarship reveal">
+    <div class="scholarship-grid reveal">
       <div class="scholarship__card">
-        <div class="scholarship__badge">GKS</div>
+        <div class="scholarship__badge scholarship__badge--gks">GKS</div>
         <div class="scholarship__body">
           <div class="scholarship__top">
-            <h3>GKS 정부초청 외국인장학생</h3>
+            <h3>정부초청 외국인장학생</h3>
             <span class="scholarship__period">2023 – 2025</span>
           </div>
           <p>
-            건양대학교 한국어 어학당 1년과 영진전문대학교 전문학사 과정 3년, 총 4년 중 3년간 GKS
-            장학금을 받았습니다. 한국어 5급을 취득한 마지막 학년 1학기에는 장학금 70%를 받았고,
-            해당 학기 성적은 4.5점 만점에 <strong>GPA 4.5</strong>를 기록했습니다. 이 성적 덕분에
-            2학기는 별도의 학비 부담 없이 다닐 수 있었습니다.
+            건양대학교 한국어 어학당과 영진전문대학교 전문학사 과정을 거치는 동안, 총 3년간
+            정부초청 외국인장학생(GKS)으로 선발되어 학비를 지원받았습니다.
           </p>
           <div class="scholarship__stats">
             <div class="scholarship__stat"><b>3년</b><span>수혜 기간</span></div>
+            <div class="scholarship__stat"><b>정부초청</b><span>장학생 유형</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scholarship__card">
+        <div class="scholarship__badge scholarship__badge--school">2026</div>
+        <div class="scholarship__body">
+          <div class="scholarship__top">
+            <h3>영진전문대학교 성적 장학금</h3>
+            <span class="scholarship__period">2026학년도 1학기</span>
+          </div>
+          <p>
+            한국어 5급을 취득한 학기에 성적 장학금 70%를 받았고, 해당 학기 4.5점 만점에
+            <strong>GPA 4.5</strong>를 기록했습니다. 이 성적 덕분에 2학기는 별도의 학비 부담 없이
+            다닐 수 있었습니다.
+          </p>
+          <div class="scholarship__stats">
             <div class="scholarship__stat"><b>70%</b><span>장학금 비율</span></div>
             <div class="scholarship__stat"><b>4.5 / 4.5</b><span>해당 학기 GPA</span></div>
+            <div class="scholarship__stat"><b>2학기</b><span>학비 면제</span></div>
           </div>
         </div>
       </div>
     </div>
 
+    <p class="about-subhead reveal">학력</p>
     <div class="edu reveal">
       <div class="edu__row">
-        <span class="edu__period">2022.02 – 2026.02</span>
-        <span class="edu__name">영진전문대학교 · 컴퓨터정보계열 (AI빅데이터 / 보안게임)</span>
+        <span class="edu__period">2026.02 – 2027.02</span>
+        <span class="edu__name">영진전문대학교 · 컴퓨터정보계열 (AI빅데이터·소프트웨어)</span>
         <span class="edu__tag edu__tag--now">졸업예정 · 재학중</span>
+      </div>
+      <div class="edu__row">
+        <span class="edu__period">2022.02 – 2026.02</span>
+        <span class="edu__name">영진전문대학교 · 컴퓨터정보계열 (AI빅데이터·소프트웨어)</span>
+        <span class="edu__tag">전문학사 졸업</span>
       </div>
       <div class="edu__row">
         <span class="edu__period">2021.03 – 2022.02</span>
@@ -168,7 +225,7 @@
     </div>
 
     <div class="lang-chart reveal">
-      <p class="lang-chart__label">4개 언어 구사 능력</p>
+      <p class="about-subhead">4개 언어 구사 능력</p>
       <div class="lang-chart__body">
         <svg class="lang-rings" viewBox="0 0 220 220" role="img" aria-label="언어별 구사 능력 도넛 차트">
           <circle class="lang-track" cx="110" cy="110" r="88"/>
@@ -258,9 +315,12 @@
     </div>
 
     <div class="skills reveal">
-      <div class="skills__group">
-        <h3>Frontend</h3>
-        <div class="chips">
+      <div class="skill-card skill-card--a">
+        <div class="skill-card__head">
+          <span class="skill-card__num">01</span>
+          <h3>Frontend</h3>
+        </div>
+        <div class="chips chips--outline">
           <span class="chip">React</span>
           <span class="chip">React Native</span>
           <span class="chip">JavaScript</span>
@@ -268,27 +328,36 @@
           <span class="chip">CSS</span>
         </div>
       </div>
-      <div class="skills__group">
-        <h3>Backend</h3>
-        <div class="chips">
+      <div class="skill-card skill-card--b">
+        <div class="skill-card__head">
+          <span class="skill-card__num">02</span>
+          <h3>Backend</h3>
+        </div>
+        <div class="chips chips--outline">
           <span class="chip">Java</span>
           <span class="chip">Spring Boot</span>
           <span class="chip">Python</span>
           <span class="chip">SQL</span>
         </div>
       </div>
-      <div class="skills__group">
-        <h3>Database</h3>
-        <div class="chips">
+      <div class="skill-card skill-card--c">
+        <div class="skill-card__head">
+          <span class="skill-card__num">03</span>
+          <h3>Database</h3>
+        </div>
+        <div class="chips chips--outline">
           <span class="chip">MySQL</span>
           <span class="chip">Oracle</span>
           <span class="chip">Redis</span>
           <span class="chip">Elasticsearch</span>
         </div>
       </div>
-      <div class="skills__group">
-        <h3>Tools &amp; ETC</h3>
-        <div class="chips">
+      <div class="skill-card skill-card--d">
+        <div class="skill-card__head">
+          <span class="skill-card__num">04</span>
+          <h3>Tools &amp; ETC</h3>
+        </div>
+        <div class="chips chips--outline">
           <span class="chip">Git</span>
           <span class="chip">GitHub</span>
           <span class="chip">VS Code</span>
@@ -307,7 +376,7 @@
       <p class="eyebrow"><span class="bracket" aria-hidden="true"></span>Part 3</p>
       <h2>개발 실적</h2>
       <p class="section__sub">각 프로젝트의 <strong>›</strong> 를 누르면 기획 배경, 기술 스택, 주요 기능을 자세히 볼 수 있습니다.
-      GitHub · 라이브 데모 링크는 실제 배포 주소로 교체해 주세요.</p>
+      라이브 데모 링크는 실제 배포 주소로 교체해 주세요.</p>
     </div>
 
     <div class="timeline">
@@ -362,7 +431,6 @@
               </ul>
             </div>
             <div class="case__links">
-              <a href="#" class="case__link">GitHub ↗</a>
               <a href="#" class="case__link case__link--placeholder">라이브 데모 링크 추가 ↗</a>
             </div>
           </div>
@@ -416,7 +484,6 @@
               </ul>
             </div>
             <div class="case__links">
-              <a href="https://github.com/khunsanwai/pongpongpuppy" target="_blank" rel="noopener" class="case__link">GitHub ↗</a>
               <a href="https://khunsanwai.github.io/pongpongpuppy" target="_blank" rel="noopener" class="case__link">Live Demo ↗</a>
             </div>
           </div>
@@ -470,7 +537,6 @@
               </ul>
             </div>
             <div class="case__links">
-              <a href="#" class="case__link">GitHub ↗</a>
               <a href="#" class="case__link case__link--placeholder">라이브 데모 링크 추가 ↗</a>
             </div>
           </div>
@@ -538,7 +604,6 @@
               체감할 수 있었고, 이는 개발자로서 자신감을 심어준 소중한 계기가 되었습니다.</p>
             </div>
             <div class="case__links">
-              <a href="#" class="case__link">GitHub ↗</a>
               <a href="#" class="case__link case__link--placeholder">라이브 데모 링크 추가 ↗</a>
             </div>
           </div>
@@ -594,7 +659,6 @@
               </ul>
             </div>
             <div class="case__links">
-              <a href="#" class="case__link">GitHub ↗</a>
               <a href="#" class="case__link case__link--placeholder">라이브 데모 링크 추가 ↗</a>
             </div>
           </div>
@@ -675,12 +739,10 @@
       <p>사용자 중심의 프론트엔드 개발, 디테일을 사로잡는 경험을 설계하겠습니다.</p>
       <div class="contact__actions">
         <a href="mailto:khunsanwai200@gmail.com" class="btn btn--primary">이메일 보내기</a>
-        <a href="portfolio.pdf" download class="btn btn--ghost">포트폴리오 다운로드 (PDF)</a>
-        <a href="resume.pdf" download class="btn btn--ghost">이력서 다운로드 (PDF)</a>
+        <a href="https://drive.google.com/file/d/1RlYbXV5lZJYIyP4whP8yq4pTDt5NAgDj/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn--ghost">포트폴리오 보기 (PDF)</a>
+        <a href="https://drive.google.com/file/d/1VwHbwUYpdU2KJXuNzdmgzzkbFXSUP88c/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn--ghost">이력서 보기 (PDF)</a>
       </div>
       <div class="contact__links">
-        <a href="https://github.com/khunsanwai" target="_blank" rel="noopener">GitHub</a>
-        <span>·</span>
         <a href="mailto:khunsanwai200@gmail.com">khunsanwai200@gmail.com</a>
         <span>·</span>
         <em class="placeholder">전화번호를 입력하세요</em>

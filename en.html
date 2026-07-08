@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khun San Wai — Full-Stack Developer</title>
+<meta name="description" content="Khun San Wai — Full-Stack Developer with a strong passion for frontend. Portfolio & Resume.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Khun San Wai — Full-Stack Developer">
+<meta property="og:description" content="Full-Stack Developer with a strong passion for frontend. Portfolio & Resume.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:locale" content="en_US">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Khun San Wai — Full-Stack Developer">
+<meta name="twitter:description" content="Full-Stack Developer with a strong passion for frontend. Portfolio & Resume.">
+<meta name="twitter:image" content="og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="grain"></div>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav__brand">KSW<span class="nav__brand-dot">.</span></a>
+  <nav class="nav__links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#aspiration">Aspiration</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="lang-switch">
+    <a href="index.html" class="lang-switch__opt">KO</a>
+    <a href="en.html" class="lang-switch__opt is-active">EN</a>
+  </div>
+  <div class="nav__downloads">
+    <a href="https://drive.google.com/file/d/1RlYbXV5lZJYIyP4whP8yq4pTDt5NAgDj/view?usp=drive_link" target="_blank" rel="noopener" class="nav__cta nav__cta--secondary">Portfolio</a>
+    <a href="https://drive.google.com/file/d/1VwHbwUYpdU2KJXuNzdmgzzkbFXSUP88c/view?usp=drive_link" target="_blank" rel="noopener" class="nav__cta">Resume</a>
+  </div>
+  <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#aspiration">Aspiration</a>
+  <a href="#contact">Contact</a>
+  <div class="lang-switch lang-switch--mobile">
+    <a href="index.html" class="lang-switch__opt">한국어</a>
+    <a href="en.html" class="lang-switch__opt is-active">English</a>
+  </div>
+  <a href="https://drive.google.com/file/d/1RlYbXV5lZJYIyP4whP8yq4pTDt5NAgDj/view?usp=drive_link" target="_blank" rel="noopener" class="mobile-menu__cta">View Portfolio</a>
+  <a href="https://drive.google.com/file/d/1VwHbwUYpdU2KJXuNzdmgzzkbFXSUP88c/view?usp=drive_link" target="_blank" rel="noopener" class="mobile-menu__cta">View Resume</a>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__blob hero__blob--a" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--b" aria-hidden="true"></div>
+    <div class="hero__text">
+      <p class="eyebrow-badge hero__in" style="--d:0"><span class="eyebrow-badge__dot"></span>Full-Stack Developer</p>
+      <h1 class="hero__title hero__in" style="--d:1">
+        <span class="hero__hi">Hi, I'm</span><br>
+        <span class="hero__name">Khun San Wai
+          <svg class="hero__swash" viewBox="0 0 220 20" aria-hidden="true"><path d="M2 12C40 2 90 2 110 10C130 18 180 18 218 6" /></svg>
+        </span>.
+      </h1>
+      <p class="hero__desc hero__in" style="--d:2">
+        A full-stack developer comfortable across backend and frontend.<br>
+        I'm most excited by the <strong>frontend</strong> — bringing screens to life.
+      </p>
+      <div class="hero__quote hero__in" style="--d:2">
+        <span class="hero__quote-mark" aria-hidden="true">“</span>
+        <p class="hero__tagline">Every line of code should carry care for the user</p>
+      </div>
+      <div class="hero__actions hero__in" style="--d:3">
+        <a href="#projects" class="btn btn--primary"><span>View Projects</span><i class="btn__arrow" aria-hidden="true">→</i></a>
+        <a href="#contact" class="btn btn--ghost"><span>Get in Touch</span></a>
+      </div>
+    </div>
+
+    <div class="hero__code hero__in" style="--d:2" aria-hidden="true">
+      <div class="code-window">
+        <div class="code-window__bar">
+          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+          <span class="code-window__title">developer.js</span>
+        </div>
+        <pre class="code-window__body"><code id="typedCode"></code><span class="cursor">▌</span></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section__head reveal">
+      <p class="eyebrow"><span class="bracket" aria-hidden="true"></span>Part 1</p>
+      <h2>Profile</h2>
+    </div>
+
+    <div class="about__grid">
+      <div class="about__card reveal">
+        <div class="about__card-top">
+          <span class="about__corner about__corner--tl" aria-hidden="true"></span>
+          <span class="about__corner about__corner--tr" aria-hidden="true"></span>
+        </div>
+        <div class="about__card-body">
+          <div class="avatar">
+            <img src="profile.jpg" alt="Portrait of Khun San Wai">
+          </div>
+          <h3>Khun San Wai</h3>
+          <span class="about__en">쿤산웨이</span>
+          <div class="about__divider" aria-hidden="true"></div>
+          <ul class="about__meta">
+            <li><span>Nationality</span>Myanmar</li>
+            <li><span>Gender</span>Male</li>
+            <li><span>Date of Birth</span><em class="placeholder">Enter your date of birth</em></li>
+            <li><span>Address</span><em class="placeholder">Enter your address</em></li>
+            <li><span>Phone</span><em class="placeholder">Enter your phone number</em></li>
+            <li><span>Education</span>Yeungjin College, Dept. of Computer Information (Expected graduation, Feb 2027)</li>
+            <li><span>Email</span><a href="mailto:khunsanwai200@gmail.com">khunsanwai200@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about__story reveal">
+        <p>
+          I was born and raised in Myanmar with no prior exposure to coding or computers — just general
+          academic study. Coming to Korea grew out of a spirit of adventure and openness to new
+          opportunities. During a year at a Korean language institute, I was exposed to a range of
+          technical fields, and found myself drawn to designing and building websites in particular —
+          which naturally led me toward frontend development, where I could shape the visual and
+          interactive layer of a product myself.
+        </p>
+        <p>
+          I then studied web development systematically from the ground up in the Software / AI Big Data
+          program at Yeungjin College. Everything felt unfamiliar at first, but understanding HTML's
+          structure and styling it with CSS gave me a clear sense of accomplishment. Using JavaScript and
+          React to bring static pages to life — building dynamic UI that responds to the user — is where I
+          fell into the depth and possibility of frontend development. Adjusting details like layout
+          balance, color harmony, and typographic readability made finishing a page feel like completing
+          a small piece of craft.
+        </p>
+        <p>
+          I also gained mobile interface design experience through an Android app development course.
+          Placing information effectively on a small screen and designing user flow around touch
+          interaction has its own charm, distinct from the web — and that experience became a solid
+          foundation for adapting flexibly across devices and platforms. Facing unfamiliar environments
+          and technologies with curiosity rather than fear, building skill step by step, is the mindset
+          that keeps me learning and adapting in this fast-moving field.
+        </p>
+        <p class="quote">
+          "Every line of code should carry care for the user" — a philosophy I arrived at through building
+          the PongPongPuppy project.
+        </p>
+      </div>
+    </div>
+
+    <div class="scholarship-grid reveal">
+      <div class="scholarship__card">
+        <div class="scholarship__badge scholarship__badge--gks">GKS</div>
+        <div class="scholarship__body">
+          <div class="scholarship__top">
+            <h3>Government Scholarship for International Students</h3>
+            <span class="scholarship__period">2023 – 2025</span>
+          </div>
+          <p>
+            Across my time at Konyang University's Korean Language Institute and Yeungjin College's
+            associate degree program, I was selected for the Government Scholarship for International
+            Students (GKS) for a total of 3 years, covering my tuition.
+          </p>
+          <div class="scholarship__stats">
+            <div class="scholarship__stat"><b>3 yrs</b><span>Duration</span></div>
+            <div class="scholarship__stat"><b>Gov't-sponsored</b><span>Scholarship Type</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scholarship__card">
+        <div class="scholarship__badge scholarship__badge--school">2026</div>
+        <div class="scholarship__body">
+          <div class="scholarship__top">
+            <h3>Yeungjin College Merit Scholarship</h3>
+            <span class="scholarship__period">2026, Semester 1</span>
+          </div>
+          <p>
+            I received a 70% merit scholarship the semester I earned Level 5 Korean proficiency, and
+            recorded a <strong>4.5 GPA</strong> (out of 4.5) that semester. Thanks to that result, Semester 2
+            was fully covered with no additional tuition cost.
+          </p>
+          <div class="scholarship__stats">
+            <div class="scholarship__stat"><b>70%</b><span>Scholarship Coverage</span></div>
+            <div class="scholarship__stat"><b>4.5 / 4.5</b><span>Semester GPA</span></div>
+            <div class="scholarship__stat"><b>Sem. 2</b><span>Tuition Waived</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="about-subhead reveal">Education</p>
+    <div class="edu reveal">
+      <div class="edu__row">
+        <span class="edu__period">2026.02 – 2027.02</span>
+        <span class="edu__name">Yeungjin College · Dept. of Computer Information (AI Big Data · Software)</span>
+        <span class="edu__tag edu__tag--now">Expected Graduation · Enrolled</span>
+      </div>
+      <div class="edu__row">
+        <span class="edu__period">2022.02 – 2026.02</span>
+        <span class="edu__name">Yeungjin College · Dept. of Computer Information (AI Big Data · Software)</span>
+        <span class="edu__tag">Associate Degree — Graduated</span>
+      </div>
+      <div class="edu__row">
+        <span class="edu__period">2021.03 – 2022.02</span>
+        <span class="edu__name">Konyang University · Korean Language Institute</span>
+        <span class="edu__tag">Completed</span>
+      </div>
+    </div>
+
+    <div class="lang-chart reveal">
+      <p class="about-subhead">4 Languages</p>
+      <div class="lang-chart__body">
+        <svg class="lang-rings" viewBox="0 0 220 220" role="img" aria-label="Donut chart of language proficiency">
+          <circle class="lang-track" cx="110" cy="110" r="88"/>
+          <circle class="lang-track" cx="110" cy="110" r="66"/>
+          <circle class="lang-track" cx="110" cy="110" r="44"/>
+          <circle class="lang-track" cx="110" cy="110" r="22"/>
+
+          <circle class="lang-ring" cx="110" cy="110" r="88" data-value="95" style="stroke:var(--gold-bright)" transform="rotate(-90 110 110)"/>
+          <circle class="lang-ring" cx="110" cy="110" r="66" data-value="60" style="stroke:var(--gold)" transform="rotate(-90 110 110)"/>
+          <circle class="lang-ring" cx="110" cy="110" r="44" data-value="40" style="stroke:var(--forest)" transform="rotate(-90 110 110)"/>
+          <circle class="lang-ring" cx="110" cy="110" r="22" data-value="40" style="stroke:var(--ink-soft)" transform="rotate(-90 110 110)"/>
+
+          <text x="110" y="106" class="lang-rings__num">4</text>
+          <text x="110" y="124" class="lang-rings__caption">Languages</text>
+        </svg>
+
+        <ul class="lang-legend">
+          <li>
+            <span class="lang-legend__dot" style="background:var(--gold-bright)"></span>
+            <span class="lang-legend__name">Korean</span>
+            <span class="lang-legend__level">Level 5 · Advanced</span>
+            <span class="lang-legend__pct">95%</span>
+          </li>
+          <li>
+            <span class="lang-legend__dot" style="background:var(--gold)"></span>
+            <span class="lang-legend__name">English</span>
+            <span class="lang-legend__level">Intermediate</span>
+            <span class="lang-legend__pct">60%</span>
+          </li>
+          <li>
+            <span class="lang-legend__dot" style="background:var(--forest)"></span>
+            <span class="lang-legend__name">Japanese</span>
+            <span class="lang-legend__level">Intermediate</span>
+            <span class="lang-legend__pct">40%</span>
+          </li>
+          <li>
+            <span class="lang-legend__dot" style="background:var(--ink-soft)"></span>
+            <span class="lang-legend__name">Thai</span>
+            <span class="lang-legend__level">Intermediate</span>
+            <span class="lang-legend__pct">40%</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section__head reveal" style="margin-top: 56px;">
+      <p class="eyebrow"><span class="bracket" aria-hidden="true"></span>Strengths &amp; Growth Areas</p>
+      <h2 style="font-size: clamp(1.4rem, 2.4vw, 1.9rem);">Strengths built on focus, shaped by collaboration</h2>
+    </div>
+
+    <div class="strengths reveal">
+      <div class="strength">
+        <span class="strength__mark">Focus &amp; Diligence</span>
+        <p>I had never touched programming before coming to Korea, but once something catches my
+        interest, I dig into it on my own. Tools like React and Git weren't covered in my formal
+        coursework, but when a team project needed them, I taught myself through online resources and
+        official docs — which let me build React-based websites and even React Native apps. I lose track
+        of time getting hands-on with a technology and seeing a result appear on screen, sometimes
+        forgetting to eat while I'm deep in it. That focus and diligence is my greatest strength as a
+        developer.</p>
+      </div>
+      <div class="strength">
+        <span class="strength__mark">Multilingual, Cross-Cultural Sense</span>
+        <p>Growing up in Myanmar and adapting to a new environment in Korea, I now speak Korean fluently
+        at Level 5. I can also communicate in English at an intermediate level, and I'm steadily building
+        Japanese and Thai from the basics. Learning and using multiple languages has given me a foundation
+        for communicating smoothly with people from different cultural backgrounds — a real asset when
+        designing user-centered services or collaborating with a team. I'm confident this language sense
+        and cultural understanding would be especially valuable at a company with a global footprint.</p>
+      </div>
+      <div class="strength strength--growth">
+        <span class="strength__mark">Growth Area — Refined Through Collaboration</span>
+        <p>I tend to worry excessively about inconveniencing others. Afraid of making mistakes or being a
+        burden, I often tried to handle everything on my own. Through repeated team projects, though, I've
+        come to appreciate the value of working together, and I'm learning to share difficulties openly
+        and ask for help when needed. I can now voice my own opinions and negotiate while still keeping
+        the team's harmony in mind, and my collaboration skills keep improving. Building on my focus and
+        self-directed learning, I want to keep working through this growth area through collaboration and
+        communication, becoming a developer who has a positive impact on the team.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section--tint" id="skills">
+    <div class="section__head reveal">
+      <p class="eyebrow"><span class="bracket" aria-hidden="true"></span>Part 2</p>
+      <h2>Skills</h2>
+    </div>
+
+    <div class="skills reveal">
+      <div class="skill-card skill-card--a">
+        <div class="skill-card__head">
+          <span class="skill-card__num">01</span>
+          <h3>Frontend</h3>
+        </div>
+        <div class="chips chips--outline">
+          <span class="chip">React</span>
+          <span class="chip">React Native</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">HTML5</span>
+          <span class="chip">CSS</span>
+        </div>
+      </div>
+      <div class="skill-card skill-card--b">
+        <div class="skill-card__head">
+          <span class="skill-card__num">02</span>
+          <h3>Backend</h3>
+        </div>
+        <div class="chips chips--outline">
+          <span class="chip">Java</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">Python</span>
+          <span class="chip">SQL</span>
+        </div>
+      </div>
+      <div class="skill-card skill-card--c">
+        <div class="skill-card__head">
+          <span class="skill-card__num">03</span>
+          <h3>Database</h3>
+        </div>
+        <div class="chips chips--outline">
+          <span class="chip">MySQL</span>
+          <span class="chip">Oracle</span>
+          <span class="chip">Redis</span>
+          <span class="chip">Elasticsearch</span>
+        </div>
+      </div>
+      <div class="skill-card skill-card--d">
+        <div class="skill-card__head">
+          <span class="skill-card__num">04</span>
+          <h3>Tools &amp; ETC</h3>
+        </div>
+        <div class="chips chips--outline">
+          <span class="chip">Git</span>
+          <span class="chip">GitHub</span>
+          <span class="chip">VS Code</span>
+          <span class="chip">Android Studio</span>
+          <span class="chip">IntelliJ</span>
+          <span class="chip">Figma</span>
+          <span class="chip">Docker</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section__head reveal">
+      <p class="eyebrow"><span class="bracket" aria-hidden="true"></span>Part 3</p>
+      <h2>Projects</h2>
+      <p class="section__sub">Click the <strong>›</strong> on each project to see the background, tech stack, and key features.
+      Live demo links should be replaced with the actual deployed URLs.</p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- 01 Food App -->
+      <article class="case reveal" data-case="1">
+        <button class="case__head" aria-expanded="false" aria-controls="case-detail-1">
+          <span class="case__index">01</span>
+          <span class="case__title-group">
+            <span class="case__top-row">
+              <h3>Food App</h3>
+              <span class="case__period">Nov 2024 · Solo Project</span>
+            </span>
+            <span class="case__summary">An all-in-one food ordering app where users browse menus, add items to a cart, and place orders</span>
+            <div class="chips chips--sm">
+              <span class="chip">Android Studio</span><span class="chip">Java</span><span class="chip">Firebase</span><span class="chip">XML</span>
+            </div>
+          </span>
+          <span class="case__chevron" aria-hidden="true">›</span>
+        </button>
+        <div class="case__detail" id="case-detail-1">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>Duration · Nov 2024 ~ Nov 2024</span>
+              <span>Team Size · Solo Project</span>
+              <span>Role · Full-Stack (Firebase, backend/frontend)</span>
+            </div>
+            <div class="case__block">
+              <h4>Background</h4>
+              <p>As delivery services and dining-out culture spread rapidly, users faced the hassle of
+              comparing and ordering across multiple apps. To solve this, I designed an integrated food
+              ordering system that lets users browse menus at a glance and complete orders with ease. The
+              goal was to simplify the ordering process and provide a fast, intuitive experience through
+              real-time data sync.</p>
+            </div>
+            <div class="case__block">
+              <h4>Tech Stack</h4>
+              <ul class="case__stack">
+                <li><b>Environment</b> Android Studio</li>
+                <li><b>Language</b> Java</li>
+                <li><b>UI</b> XML Layout</li>
+                <li><b>Database</b> Firebase Realtime Database</li>
+                <li><b>Architecture</b> MVC Layout</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>Key Features</h4>
+              <ul class="case__features">
+                <li>Menu list browsing and item detail view (price, description, image)</li>
+                <li>Add, edit, and remove items from the cart</li>
+                <li>Real-time order storage via Firebase Realtime Database</li>
+                <li>Order history for convenient reordering</li>
+              </ul>
+            </div>
+            <div class="case__links">
+              <a href="#" class="case__link case__link--placeholder">Add live demo link ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 PongPongPuppy -->
+      <article class="case reveal" data-case="2">
+        <button class="case__head" aria-expanded="false" aria-controls="case-detail-2">
+          <span class="case__index">02</span>
+          <span class="case__title-group">
+            <span class="case__top-row">
+              <h3>PongPongPuppy</h3>
+              <span class="case__period">Dec 2024 · Solo Project</span>
+            </span>
+            <span class="case__summary">A pet-care website for booking dog grooming/care services and checking notices</span>
+            <div class="chips chips--sm">
+              <span class="chip">HTML5</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+            </div>
+          </span>
+          <span class="case__chevron" aria-hidden="true">›</span>
+        </button>
+        <div class="case__detail" id="case-detail-2">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>Duration · Dec 2024 ~ Dec 2024</span>
+              <span>Team Size · Solo Project</span>
+              <span>Role · Full planning, design &amp; frontend</span>
+            </div>
+            <div class="case__block">
+              <h4>Background</h4>
+              <p>This grew out of the need for a platform where pet owners could conveniently and
+              intuitively book grooming, health care, and check notices — especially with better
+              accessibility and usability on mobile. I planned, designed, and built the entire site myself,
+              from concept through deployment, with a friendly UI and warm visual design for booking dog
+              services and viewing information.</p>
+            </div>
+            <div class="case__block">
+              <h4>Tech Stack</h4>
+              <ul class="case__stack">
+                <li><b>Environment</b> VS Code</li>
+                <li><b>Language</b> HTML, CSS, JavaScript</li>
+                <li><b>Styling/Layout</b> Flexbox, Grid, responsive web design, transition/keyframes animation</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>Key Features</h4>
+              <ul class="case__features">
+                <li>Booking — reserve grooming/care services, view and cancel bookings</li>
+                <li>Information — notices, events, and pet-related news</li>
+                <li>Usability — intuitive UI and responsive design across desktop and mobile</li>
+              </ul>
+            </div>
+            <div class="case__links">
+              <a href="https://khunsanwai.github.io/pongpongpuppy" target="_blank" rel="noopener" class="case__link">Live Demo ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 Mini Library -->
+      <article class="case reveal" data-case="3">
+        <button class="case__head" aria-expanded="false" aria-controls="case-detail-3">
+          <span class="case__index">03</span>
+          <span class="case__title-group">
+            <span class="case__top-row">
+              <h3>Mini Library</h3>
+              <span class="case__period">Jun 2025 · Solo Project</span>
+            </span>
+            <span class="case__summary">A book search/borrow/return web app with separate admin and user permissions</span>
+            <div class="chips chips--sm">
+              <span class="chip">React</span><span class="chip">Spring Boot</span><span class="chip">MySQL</span>
+            </div>
+          </span>
+          <span class="case__chevron" aria-hidden="true">›</span>
+        </button>
+        <div class="case__detail" id="case-detail-3">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>Duration · Jun 2025 ~ Jun 2025</span>
+              <span>Team Size · Solo Project</span>
+              <span>Role · Full-Stack (DB, backend/frontend)</span>
+            </div>
+            <div class="case__block">
+              <h4>Background</h4>
+              <p>Many libraries still track borrowing and returns by hand or offer only limited search,
+              making it slow to find a book and hard for admins to manage book and member records
+              systematically. I designed this to clearly separate admin and user roles, and to simplify
+              library management through intuitive search and real-time borrow/return functionality.</p>
+            </div>
+            <div class="case__block">
+              <h4>Tech Stack</h4>
+              <ul class="case__stack">
+                <li><b>Frontend</b> React, JavaScript, CSS</li>
+                <li><b>Backend</b> Spring Boot</li>
+                <li><b>Database</b> MySQL</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>Key Features</h4>
+              <ul class="case__features">
+                <li>Admin — add/edit/delete books and view listings, manage member info, view borrow/return status</li>
+                <li>User — search books by title/author/category, borrow/return, view borrowing history</li>
+                <li>Real-time validation and guidance on availability and due dates</li>
+              </ul>
+            </div>
+            <div class="case__links">
+              <a href="#" class="case__link case__link--placeholder">Add live demo link ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 GoodsMoa -->
+      <article class="case reveal" data-case="4">
+        <button class="case__head" aria-expanded="false" aria-controls="case-detail-4">
+          <span class="case__index">04</span>
+          <span class="case__title-group">
+            <span class="case__top-row">
+              <h3>GoodsMoa</h3>
+              <span class="case__period">Feb 2025 – Jul 2025 · Team Project (7 members) · Capstone Design</span>
+            </span>
+            <span class="case__summary">An all-in-one merchandise marketplace supporting listings, trading, commissions, and live chat</span>
+            <div class="chips chips--sm">
+              <span class="chip">React</span><span class="chip">Spring Boot</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">Docker</span>
+            </div>
+          </span>
+          <span class="case__chevron" aria-hidden="true">›</span>
+        </button>
+        <div class="case__detail" id="case-detail-4">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>Duration · Feb 2025 ~ Jul 2025</span>
+              <span>Team Size · Team Project (7 members)</span>
+              <span>Role · Frontend Lead</span>
+            </div>
+            <div class="case__block">
+              <h4>Background</h4>
+              <p>Merchandise trading was scattered across unofficial channels like social media, open
+              chats, and secondhand marketplaces, making it hard for users to search efficiently or manage
+              transaction history, with a real risk of scams and fake listings. I set out to build a
+              platform dedicated to merch trading so creators and buyers could trade safely and in an
+              organized way.</p>
+            </div>
+            <div class="case__block">
+              <h4>Tech Stack</h4>
+              <ul class="case__stack">
+                <li><b>Frontend</b> React, JavaScript, CSS</li>
+                <li><b>Backend</b> Spring Boot, JUnit</li>
+                <li><b>Database</b> MySQL, Redis, Elasticsearch</li>
+                <li><b>ETC</b> Docker, GitHub, Figma</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>Key Features</h4>
+              <ul class="case__features">
+                <li>Category filtering, search, and hashtags to quickly find items</li>
+                <li>Likes (wishlist) and live chat for price negotiation and questions</li>
+                <li>Cart and simple checkout integrated with Toss Payments</li>
+                <li>Multi-item listing with configurable sale period, visibility, and shipping method</li>
+                <li>Commission listing/requests with accept/decline status management</li>
+                <li>Real-time state management UI built with useState, useEffect, and Context API</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>Problem-Solving Experience</h4>
+              <p>I was responsible for the frontend, but React wasn't covered in our formal coursework, so
+              this was uncharted territory. Component structure and state management were difficult at
+              first, and errors came up often — but every time I hit a wall, I found solutions myself
+              through searching, official docs, and reading open-source code, then shared what I learned
+              with the team so we could grow together. I organized the CSS structure for a responsive UI
+              and used Git to manage work efficiently, getting a taste of a real-world development
+              process. By the end, I'd gained more than just technical skill — a deep appreciation for
+              self-directed problem-solving and collaboration, and a real boost in confidence as a
+              developer.</p>
+            </div>
+            <div class="case__links">
+              <a href="#" class="case__link case__link--placeholder">Add live demo link ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 New You -->
+      <article class="case reveal" data-case="5">
+        <button class="case__head" aria-expanded="false" aria-controls="case-detail-5">
+          <span class="case__index">05</span>
+          <span class="case__title-group">
+            <span class="case__top-row">
+              <h3>New You</h3>
+              <span class="case__period">Sep 2025 – Oct 2025 · Solo Project · Capstone Design</span>
+            </span>
+            <span class="case__summary">A lifestyle app combining schedule management with social networking</span>
+            <div class="chips chips--sm">
+              <span class="chip">React Native</span><span class="chip">Spring Boot</span><span class="chip">MySQL</span>
+            </div>
+          </span>
+          <span class="case__chevron" aria-hidden="true">›</span>
+        </button>
+        <div class="case__detail" id="case-detail-5">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>Duration · Sep 2025 ~ Oct 2025</span>
+              <span>Team Size · Solo Project</span>
+              <span>Role · Full-Stack (DB, backend/frontend)</span>
+            </div>
+            <div class="case__block">
+              <h4>Background</h4>
+              <p>Existing schedule apps are designed around the individual, lacking features for sharing
+              plans or collaborating with friends. I set out to build an integrated lifestyle platform that
+              blurs the line between schedule management and social networking, offering a natural,
+              schedule-driven way to stay connected through birthday reminders, gift reminders, shared
+              timetables, and live chat.</p>
+            </div>
+            <div class="case__block">
+              <h4>Tech Stack</h4>
+              <ul class="case__stack">
+                <li><b>Frontend</b> React Native, JavaScript, CSS</li>
+                <li><b>Backend</b> Spring Boot</li>
+                <li><b>Database</b> MySQL</li>
+                <li><b>ETC</b> VS Code, GitHub, Figma</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>Key Features</h4>
+              <ul class="case__features">
+                <li>Smart Birthday Reminders — automatic alerts and gift-prep reminders for friends' birthdays</li>
+                <li>Integrated Timetable — manage personal schedule and class timetable in one view</li>
+                <li>Timetable Sharing &amp; Overlay View — overlay schedules with friends to spot shared free time</li>
+                <li>Live Group Chat — turn a chat conversation into a scheduled event on the spot</li>
+              </ul>
+            </div>
+            <div class="case__links">
+              <a href="#" class="case__link case__link--placeholder">Add live demo link ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ASPIRATION -->
+  <section class="section section--dark" id="aspiration">
+    <div class="section__head reveal">
+      <p class="eyebrow eyebrow--light"><span class="bracket bracket--light" aria-hidden="true"></span>Part 4</p>
+      <h2>Career Aspirations</h2>
+    </div>
+
+    <p class="aspiration__lede reveal">"A user-focused frontend developer, designing experiences that get the details right."</p>
+
+    <p class="aspiration__intro reveal">
+      I believe the core of frontend development isn't just building features — it's shaping how users
+      feel and behave through technology. Building the PongPongPuppy project, I felt firsthand how much a
+      single pixel of CSS, a color choice, or the use of whitespace can shape the entire user experience.
+      Through the New You project, I built the ability to bring complex features together intuitively on
+      mobile and design smooth user flows. I want to work somewhere I can add real value through careful
+      design sense and strong technical execution.
+    </p>
+
+    <div class="pillars reveal">
+      <div class="pillar">
+        <span class="pillar__num">1</span>
+        <h3>A Developer Who Follows Through</h3>
+        <p>I don't stop at making a feature work — I think through how the result affects real users and
+        push for polish. I'll catch every bug and every design inconsistency, checking things through to
+        the end from the user's point of view.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar__num">2</span>
+        <h3>A Colleague Who Grows With the Team</h3>
+        <p>I value the team's growth over individual credit. I won't insist on my own opinion over the
+        team's direction, and I'll share knowledge openly to help build a culture where we learn and grow
+        together.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar__num">3</span>
+        <h3>An Expert Who Turns Learning Into Practice</h3>
+        <p>In a fast-changing IT landscape, I won't slack on learning new tools and technologies — and
+        I'll prove that learning through real gains in productivity and usability.</p>
+      </div>
+    </div>
+
+    <div class="term-goals reveal">
+      <div class="term-goal">
+        <h3>Short-Term Goals</h3>
+        <p>After joining, my first priority is adapting quickly to the team's development culture and
+        process. I'll learn to see my code through a teammate's eyes via code review, and help maintain
+        code consistency and quality with tools like ESLint and Prettier. My first goal is to understand
+        the design system thoroughly and carefully build reusable components that boost the team's
+        development productivity. I'll also actively learn CI/CD, which I haven't yet applied in a
+        production setting, so I can get up to speed on the deployment process quickly.</p>
+      </div>
+      <div class="term-goal">
+        <h3>Long-Term Goals</h3>
+        <p>Long term, I want to grow beyond implementation into a proactive developer who analyzes user
+        data and feedback to identify business problems and propose solutions. Drawing on experience
+        across web and mobile, I want to help deliver a consistent UX across platforms, and take the lead
+        on frontend architecture improvements that raise both development productivity and user
+        satisfaction. My goal is to become a colleague who sparks technical discussion within the team and
+        helps build a better development culture.</p>
+      </div>
+    </div>
+
+    <p class="aspiration__promise reveal">
+      The adventurous spirit and adaptability I built through learning Korean and adjusting to a new
+      culture are my greatest assets. I'll stay open to learning and flexible in the face of new
+      technologies and changing needs, always keeping the user first, and do my best to be a colleague
+      people can rely on.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="contact__inner reveal">
+      <h2>Let's build something together.</h2>
+      <p>User-focused frontend development, designing experiences that get the details right.</p>
+      <div class="contact__actions">
+        <a href="mailto:khunsanwai200@gmail.com" class="btn btn--primary">Send an Email</a>
+        <a href="https://drive.google.com/file/d/1RlYbXV5lZJYIyP4whP8yq4pTDt5NAgDj/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn--ghost">View Portfolio (PDF)</a>
+        <a href="https://drive.google.com/file/d/1VwHbwUYpdU2KJXuNzdmgzzkbFXSUP88c/view?usp=drive_link" target="_blank" rel="noopener" class="btn btn--ghost">View Resume (PDF)</a>
+      </div>
+      <div class="contact__links">
+        <a href="mailto:khunsanwai200@gmail.com">khunsanwai200@gmail.com</a>
+        <span>·</span>
+        <em class="placeholder">Enter your phone number</em>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Khun San Wai. Built with HTML, CSS &amp; JavaScript.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
