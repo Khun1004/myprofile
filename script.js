@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- 3. Language ring chart fill on scroll ---------- */
   const langRings = document.querySelectorAll('.lang-ring');
+  const langRingsSvg = document.querySelector('.lang-rings');
   langRings.forEach(ring => {
     const r = parseFloat(ring.getAttribute('r'));
     const circumference = 2 * Math.PI * r;
@@ -102,28 +103,31 @@ document.addEventListener('DOMContentLoaded', () => {
     ring.dataset.circumference = String(circumference);
   });
 
-  if('IntersectionObserver' in window){
-    const ringIo = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          const ring = entry.target;
-          const value = parseFloat(ring.getAttribute('data-value')) || 0;
-          const circumference = parseFloat(ring.dataset.circumference);
-          const target = circumference - (circumference * value / 100);
-          requestAnimationFrame(() => {
-            ring.style.strokeDashoffset = String(target);
-          });
-          ringIo.unobserve(ring);
-        }
-      });
-    }, { threshold: 0.35 });
-    langRings.forEach(ring => ringIo.observe(ring));
-  } else {
+  function fillLangRings(){
     langRings.forEach(ring => {
       const value = parseFloat(ring.getAttribute('data-value')) || 0;
       const circumference = parseFloat(ring.dataset.circumference);
-      ring.style.strokeDashoffset = String(circumference - (circumference * value / 100));
+      const target = circumference - (circumference * value / 100);
+      requestAnimationFrame(() => {
+        ring.style.strokeDashoffset = String(target);
+      });
     });
+  }
+
+  if(langRingsSvg && 'IntersectionObserver' in window){
+    // Observe the whole SVG container rather than individual <circle> elements —
+    // some mobile browsers don't reliably report intersection entries for raw SVG shapes.
+    const ringIo = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          fillLangRings();
+          ringIo.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    ringIo.observe(langRingsSvg);
+  } else {
+    fillLangRings();
   }
 
   /* ---------- 4. Mobile menu ---------- */
