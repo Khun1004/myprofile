@@ -1,17 +1,10 @@
 // ==========================================================
 // Khun San Wai — Resume site interactions
-// 1) Hero code-typing animation with light syntax highlighting
-// 2) Scroll-triggered reveal for sections
-// 3) Language proficiency bar fill on scroll
-// 4) Mobile menu toggle
-// 5) Footer year
-// 6) Project case-file accordion (click › to expand details)
 // ==========================================================
 
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- 0. Scroll progress bar ---------- */
   const progressBar = document.getElementById('scrollProgress');
   function updateProgress(){
     if(!progressBar) return;
@@ -24,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress);
 
-  /* ---------- 1. Typing code animation ---------- */
   const codeEl = document.getElementById('typedCode');
 
   const codeLines = [
@@ -76,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   typeCode();
 
-  /* ---------- 2. Scroll reveal ---------- */
   const revealEls = document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
     const io = new IntersectionObserver((entries) => {
@@ -92,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => el.classList.add('is-visible'));
   }
 
-  /* ---------- 3. Language ring chart fill on scroll ---------- */
   const langRings = document.querySelectorAll('.lang-ring');
   const langRingsSvg = document.querySelector('.lang-rings');
   langRings.forEach(ring => {
@@ -115,8 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if(langRingsSvg && 'IntersectionObserver' in window){
-    // Observe the whole SVG container rather than individual <circle> elements —
-    // some mobile browsers don't reliably report intersection entries for raw SVG shapes.
     const ringIo = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -130,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fillLangRings();
   }
 
-  /* ---------- 4. Mobile menu ---------- */
   const burger = document.getElementById('navBurger');
   const mobileMenu = document.getElementById('mobileMenu');
   if(burger && mobileMenu){
@@ -146,11 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- 5. Footer year ---------- */
   const yearEl = document.getElementById('year');
   if(yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---------- 6. Project case-file accordion ---------- */
   const caseHeads = document.querySelectorAll('.case__head');
 
   function setCaseHeight(article, detail){
@@ -178,12 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Keep open cases correctly sized if content shifts (e.g. font load, resize)
     window.addEventListener('resize', () => setCaseHeight(article, detail));
   });
 
-  // Recalculate open case heights once web fonts finish loading,
-  // since Fraunces/Inter can change measured text height.
   if(document.fonts && document.fonts.ready){
     document.fonts.ready.then(() => {
       document.querySelectorAll('.case').forEach(article => {
@@ -194,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- 7. Scroll-spy: underline the active nav link + scroll dots ---------- */
   const navEl = document.getElementById('nav');
   const navLinks = document.querySelectorAll('.nav__links a[href^="#"]');
   const scrollDots = document.querySelectorAll('.scroll-dot');

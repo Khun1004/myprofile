@@ -2,9 +2,6 @@
    Khun San Wai — Resume site
    Palette: ivory paper, deep ink, brass gold, forest jewel-green
    Type: Fraunces (display) / Inter (body) / JetBrains Mono (labels)
-   Signature: the black corner-bracket + brass tag from the
-   candidate's own portfolio deck, carried through as a motif;
-   projects unfold as numbered case files.
    ========================================================== */
 
 :root{
@@ -87,7 +84,6 @@ img{ max-width:100%; display:block; }
 }
 .eyebrow--light{ color: var(--mint); }
 
-/* signature corner-bracket motif, lifted from the candidate's own deck */
 .bracket{
   position: relative;
   display: inline-block;
@@ -100,7 +96,6 @@ img{ max-width:100%; display:block; }
 .reveal.is-visible .bracket{ clip-path: inset(0 0 0 0); }
 .bracket--light{ border-color: var(--mint); }
 
-/* ---------- nav ---------- */
 .nav{
   position: sticky; top:0; z-index: 50;
   display:flex; align-items:center; gap: 24px;
@@ -178,7 +173,6 @@ img{ max-width:100%; display:block; }
   .nav > .lang-switch{ margin-left: auto; }
 }
 
-/* ---------- buttons ---------- */
 .btn{
   position: relative; overflow: hidden;
   display:inline-flex; align-items:center; gap:8px;
@@ -203,7 +197,6 @@ img{ max-width:100%; display:block; }
 .btn--ghost{ background:transparent; color: var(--ink); border: 1.5px solid var(--line); }
 .btn--ghost:hover{ border-color: var(--gold); color: var(--gold-ink); transform: translateY(-3px); box-shadow: 0 14px 26px -16px rgba(168,124,34,.35); }
 
-/* ---------- hero ---------- */
 .hero{
   position:relative; z-index:2; overflow: hidden;
   max-width: var(--maxw); margin: 0 auto;
@@ -326,7 +319,6 @@ img{ max-width:100%; display:block; }
   .hero{ grid-template-columns: 1fr; }
 }
 
-/* ---------- generic section ---------- */
 .section{
   max-width: var(--maxw); margin: 0 auto;
   padding: clamp(56px,8vw,96px) clamp(20px,5vw,64px);
@@ -336,7 +328,6 @@ img{ max-width:100%; display:block; }
 .section__head h2{ font-size: clamp(1.8rem, 3vw, 2.5rem); }
 .section__sub{ color: var(--ink-soft); font-size:.92rem; max-width: 64ch; }
 
-/* ---------- about ---------- */
 .about__grid{
   display:grid; grid-template-columns: 300px 1fr; gap: 40px; margin-top: 32px;
 }
@@ -468,7 +459,6 @@ img{ max-width:100%; display:block; }
   .edu__row::before{ left: -24px; }
 }
 
-/* ---------- language ring chart ---------- */
 .lang-chart{ margin-top: 0; }
 .lang-chart__body{
   display:flex; align-items:center; gap: 44px; flex-wrap: wrap;
@@ -545,7 +535,6 @@ img{ max-width:100%; display:block; }
 .strength--growth .strength__num,
 .strength--growth .strength__mark{ color: var(--ink); }
 
-/* ---------- scholarship ---------- */
 .scholarship-grid{
   margin-top: 20px; display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 22px;
 }
@@ -584,7 +573,6 @@ img{ max-width:100%; display:block; }
   .scholarship__card{ flex-direction: column; }
 }
 
-/* ---------- aspiration extras ---------- */
 .aspiration__lede{
   font-family:'Fraunces',serif; font-style: italic; font-size: clamp(1.1rem,2vw,1.4rem);
   color:#fff; max-width: 46ch; margin: 8px 0 24px;
@@ -605,7 +593,6 @@ img{ max-width:100%; display:block; }
   font-family:'Fraunces',serif; font-style: italic; color: var(--mint); font-size: 1.02rem; max-width: 74ch;
 }
 
-/* ---------- skills ---------- */
 .skills{ margin-top: 32px; display:grid; grid-template-columns: repeat(4, 1fr); gap: 22px; align-items: start; }
 .skill-card{
   position: relative; background: var(--ink); border: 1px solid rgba(255,255,255,.06); border-radius: var(--radius);
@@ -681,7 +668,6 @@ img{ max-width:100%; display:block; }
 .chips--sm{ margin-top: 12px; }
 .chips--sm .chip{ font-size:.74rem; padding:4px 10px; background: var(--paper); border:1px solid var(--line); color: var(--ink-soft); }
 
-/* ---------- projects / case files ---------- */
 .timeline{ margin-top: 40px; display:flex; flex-direction:column; gap: 18px; }
 
 .case{
@@ -696,7 +682,16 @@ img{ max-width:100%; display:block; }
 .case[data-case="2"]::before{ background: var(--gold); }
 .case[data-case="3"]::before{ background: var(--forest); }
 .case[data-case="4"]::before{ background: var(--forest-2); }
-.case[data-case="5"]::before{ background: var(--ink-soft); }
+.case[data-case="5"]::before{ background: #B23A2E; }
+.case[data-case="6"]::before{ background: var(--ink-soft); }
+
+.case__head-row{
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 24px 26px 0;
+}
+.case__head-row .case__head{ padding: 0 0 24px; }
 
 .case__head{
   width: 100%; text-align: left; background: none; border: 0; cursor: pointer;
@@ -762,13 +757,21 @@ img{ max-width:100%; display:block; }
 .case__link--placeholder{ color: var(--ink-soft); border-bottom: 1px dashed var(--ink-soft); text-decoration:none; }
 .case__link--placeholder:hover{ color: var(--gold-ink); border-color: var(--gold-ink); }
 
+.case__link--video{
+  display:inline-flex; align-items:center; gap:7px;
+  color: var(--ink-soft); border-bottom: 1px dashed var(--ink-soft); text-decoration:none;
+}
+.case__link--video:hover{ color: #B23A2E; border-color:#B23A2E; }
+.case__link--video svg{ width:16px; height:16px; flex-shrink:0; }
+
 @media (max-width: 600px){
   .case__head{ padding: 20px 18px; gap: 14px; }
   .case__index{ width:38px; height:38px; font-size:.85rem; }
   .case__detail-inner{ padding-left: 18px; padding-right: 18px; margin: 0 18px; }
+  .case__head-row{ padding: 20px 18px 0; }
+  .case__head-row .case__head{ padding: 0 0 20px; }
 }
 
-/* ---------- aspiration (dark) ---------- */
 .section--dark{
   background: var(--forest); color: #EDF3EE; max-width:none;
   position: relative; overflow: hidden;
@@ -805,7 +808,6 @@ img{ max-width:100%; display:block; }
 .pillar h3{ color:#fff; font-size:1.05rem; }
 .pillar p{ color:#AEC2B7; font-size:.92rem; }
 
-/* ---------- contact ---------- */
 .contact__inner{ text-align:center; max-width: 640px; margin: 0 auto; }
 .contact h2{ font-size: clamp(1.8rem,3.4vw,2.4rem); }
 .contact p{ color: var(--ink-soft); }
@@ -814,7 +816,6 @@ img{ max-width:100%; display:block; }
 .contact__links a{ text-decoration:none; }
 .contact__links a:hover{ text-decoration: underline; }
 
-/* ---------- footer ---------- */
 .footer{ background: linear-gradient(135deg, var(--forest) 0%, var(--forest-2) 100%); color:#EDF3EE; }
 .footer__inner{
   max-width: var(--maxw); margin:0 auto;
@@ -841,7 +842,6 @@ img{ max-width:100%; display:block; }
   .footer__inner{ flex-direction: column; gap: 26px; }
 }
 
-/* ---------- tech marquee (dark, full-bleed, scrolling icon strip) ---------- */
 .tech-marquee{
   margin-top: 40px;
   background: var(--ink);
@@ -888,7 +888,6 @@ img{ max-width:100%; display:block; }
   .tech-marquee__icon{ width: 24px; height: 24px; }
   .tech-marquee__label{ font-size: .95rem; }
 }
-/* ---------- impact stats strip ---------- */
 .stats-strip{ border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--paper-tint); position: relative; z-index: 2; }
 .stats-strip__inner{
   max-width: var(--maxw); margin: 0 auto;
@@ -917,7 +916,6 @@ img{ max-width:100%; display:block; }
   .stats-strip__inner{ gap: 26px 34px; }
 }
 
-/* ---------- scroll-dot side navigation ---------- */
 .scroll-dots{
   position: fixed; right: 22px; top:50%; transform: translateY(-50%); z-index: 40;
   display:flex; flex-direction:column; gap: 16px;
@@ -932,16 +930,57 @@ img{ max-width:100%; display:block; }
   .scroll-dots{ display: none; }
 }
 
-/* ---------- custom scrollbar ---------- */
 html{ scrollbar-width: thin; scrollbar-color: var(--gold-pale) var(--paper); }
 ::-webkit-scrollbar{ width: 10px; }
 ::-webkit-scrollbar-track{ background: var(--paper); }
 ::-webkit-scrollbar-thumb{ background: var(--gold-pale); border-radius: 10px; border: 2px solid var(--paper); }
 ::-webkit-scrollbar-thumb:hover{ background: var(--gold); }
 
-/* ---------- scroll reveal ---------- */
 .reveal{
   opacity:0; transform: translateY(24px);
   transition: opacity .7s var(--ease), transform .7s var(--ease);
 }
 .reveal.is-visible{ opacity:1; transform:none; }
+
+/* ==========================================================
+   YouTube demo-video quick-launch button (left of each case)
+   ========================================================== */
+.case__yt{
+  position: relative;
+  flex-shrink: 0;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(155deg, #2A2621 0%, var(--ink) 100%);
+  border: 1px solid rgba(255,255,255,.08);
+  text-decoration: none;
+  box-shadow: 0 10px 20px -12px rgba(23,20,15,.55);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), background .3s var(--ease);
+}
+.case__yt::after{
+  content: '';
+  position: absolute; inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  transition: border-color .3s var(--ease), inset .3s var(--ease);
+}
+.case__yt svg{
+  width: 18px; height: 18px;
+  fill: var(--gold-bright);
+  transition: fill .3s var(--ease), transform .3s var(--ease);
+  position: relative; z-index: 1;
+  margin-left: 2px;
+}
+.case__yt:hover{
+  transform: scale(1.08);
+  background: linear-gradient(155deg, #3a1512 0%, #2a0f0d 100%);
+  box-shadow: 0 14px 26px -12px rgba(178,58,46,.55);
+}
+.case__yt:hover::after{ border-color: #B23A2E; inset: -5px; }
+.case__yt:hover svg{ fill: #FF6B58; transform: scale(1.1); }
+.case__yt:focus-visible{ outline-offset: 4px; }
+
+@media (max-width: 600px){
+  .case__yt{ width: 40px; height: 40px; }
+  .case__yt svg{ width: 15px; height: 15px; }
+}
