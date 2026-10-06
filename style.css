@@ -684,6 +684,7 @@ img{ max-width:100%; display:block; }
 .case[data-case="4"]::before{ background: var(--forest-2); }
 .case[data-case="5"]::before{ background: #B23A2E; }
 .case[data-case="6"]::before{ background: var(--ink-soft); }
+.case[data-case="7"]::before{ background: var(--gold-ink); }
 
 .case__head-row{
   display: flex;

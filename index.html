@@ -107,7 +107,7 @@
   <section class="stats-strip reveal" aria-label="핵심 지표">
     <div class="stats-strip__inner">
       <div class="stat-block">
-        <span class="stat-block__num">06</span>
+        <span class="stat-block__num">07</span>
         <span class="stat-block__label">프로젝트</span>
       </div>
       <div class="stats-strip__divider" aria-hidden="true"></div>
@@ -860,6 +860,71 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                 시연 영상 보기 ↗
               </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 07 I'm Khun / KWZM Center -->
+      <article class="case reveal" data-case="7">
+        <div class="case__head-row">
+          <button class="case__head" aria-expanded="false" aria-controls="case-detail-7">
+            <span class="case__index">07</span>
+            <span class="case__title-group">
+              <span class="case__top-row">
+                <h3>I'm Khun / KWZM Center</h3>
+                <span class="case__period">2026.08 – 2026.10 · 개인 프로젝트</span>
+              </span>
+              <span class="case__summary">한국어·미얀마어 교육 센터의 홍보 사이트, 수강생 포털, 관리자 페이지를 하나로 묶은 교육 센터 운영 플랫폼</span>
+              <div class="chips chips--sm">
+                <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">JPA</span><span class="chip">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS</span>
+              </div>
+            </span>
+            <span class="case__chevron" aria-hidden="true">›</span>
+          </button>
+        </div>
+        <div class="case__detail" id="case-detail-7">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>개발 기간 · 2026.08 ~ 2026.10</span>
+              <span>개발 인원 · 개인 프로젝트</span>
+              <span>담당 파트 · 풀스택 (기획·백엔드·프론트엔드)</span>
+            </div>
+            <div class="case__block">
+              <h4>기획 배경</h4>
+              <p>교육 센터를 운영하려면 수강 신청, 입금 확인, 출석, 학습 자료 공유, 학생 문의 응대가 모두
+              필요하지만, 보통은 메신저와 엑셀로 따로따로 처리하게 됩니다. 이 흐름을 한 곳에서 처리할 수
+              있도록, 홍보 사이트와 수강생 포털, 관리자 페이지를 하나의 백엔드로 연결한 통합 운영
+              플랫폼을 기획했습니다. 수강생은 신청부터 출석, 자료 열람, 선생님께 질문하기까지 한 계정으로
+              해결하고, 관리자는 입금 확인과 알림 발송을 한 화면에서 처리하는 것을 목표로 했습니다.</p>
+            </div>
+            <div class="case__block">
+              <h4>기술 스택</h4>
+              <ul class="case__stack">
+                <li><b>Backend</b> Java, Spring Boot, JPA</li>
+                <li><b>Frontend</b> HTML5, CSS, JavaScript</li>
+                <li><b>아키텍처</b> Controller · Service · Repository · Domain · DTO 계층형 구조</li>
+                <li><b>인증</b> Spring Security, 쿠키 토큰 방식 병행 (홍보 사이트와 수강생 포털이 같은 회원 정보 사용)</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>주요 기능</h4>
+              <ul class="case__features">
+                <li>QR코드 출석 — 관리자가 QR을 발급하면 학생이 스캔해 출석, 수업 시작 10분 전~1시간 후에만 서버에서 허용</li>
+                <li>결제 안내 &amp; 영수증 — 입금 전·확인 요청 중·결제 완료를 색으로 구분하고, 입금 확인 후 영수증 출력·PDF 저장</li>
+                <li>자동 알림 — 스케줄러로 수업 알림과 생일 축하를 매일 발송, 같은 해 중복 발송 방지</li>
+                <li>선생님-학생 1:1 메시지 — 새 메시지 알림, 안 읽은 메시지 표시, 관리자 화면에서 학생별 대화 목록과 답장</li>
+                <li>영상 자료 시청 현황 — 학생이 영상을 열면 기록하고, 관리자가 자료별 시청 인원과 학생 목록 확인</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>문제 해결 경험</h4>
+              <p>출석 QR이 비어 보이는 문제를 직접 발견해 원인을 추적했고, 외부 사이트에서 불러오던 QR
+              라이브러리 주소가 잘못되어 있다는 것을 확인해 라이브러리를 프로젝트 안에 포함하는 방식으로
+              바꿔 해결했습니다. 또한 서로 다른 로그인 방식을 쓰는 두 화면이 같은 회원 정보를 공유하도록
+              연결하고, 생일 알림이 같은 해에 중복 발송되지 않도록 발송 연도를 기록하는 등 실제 운영
+              상황에서 생길 수 있는 문제를 미리 상정해 설계했습니다. 이 과정에서 화면 하나를 추가하려면
+              엔티티·DTO·API·관리자 화면·알림까지 함께 설계해야 한다는 풀스택 개발의 감각을 익혔습니다.</p>
             </div>
           </div>
         </div>

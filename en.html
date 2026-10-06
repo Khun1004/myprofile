@@ -107,7 +107,7 @@
   <section class="stats-strip reveal" aria-label="Key stats">
     <div class="stats-strip__inner">
       <div class="stat-block">
-        <span class="stat-block__num">06</span>
+        <span class="stat-block__num">07</span>
         <span class="stat-block__label">Projects</span>
       </div>
       <div class="stats-strip__divider" aria-hidden="true"></div>
@@ -873,6 +873,73 @@
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                 Watch demo video ↗
               </a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 07 I'm Khun / KWZM Center -->
+      <article class="case reveal" data-case="7">
+        <div class="case__head-row">
+          <button class="case__head" aria-expanded="false" aria-controls="case-detail-7">
+            <span class="case__index">07</span>
+            <span class="case__title-group">
+              <span class="case__top-row">
+                <h3>I'm Khun / KWZM Center</h3>
+                <span class="case__period">Aug 2026 – Oct 2026 · Solo Project</span>
+              </span>
+              <span class="case__summary">An education-center platform that ties a promo site, a student portal, and an admin panel into one system for a Korean &amp; Burmese language center</span>
+              <div class="chips chips--sm">
+                <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">JPA</span><span class="chip">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS</span>
+              </div>
+            </span>
+            <span class="case__chevron" aria-hidden="true">›</span>
+          </button>
+        </div>
+        <div class="case__detail" id="case-detail-7">
+          <div class="case__detail-inner">
+            <div class="case__meta-row">
+              <span>Duration · Aug 2026 – Oct 2026</span>
+              <span>Team Size · Solo Project</span>
+              <span>Role · Full-Stack (Planning, Backend, Frontend)</span>
+            </div>
+            <div class="case__block">
+              <h4>Background</h4>
+              <p>Running an education center means handling enrollment, payment confirmation, attendance,
+              learning materials, and student questions — usually scattered across chat apps and
+              spreadsheets. I planned an all-in-one platform that connects a promo site, a student portal,
+              and an admin panel to a single backend. Students handle everything from enrollment to
+              attendance, materials, and questions to the teacher with one account, while the admin
+              confirms payments and sends notifications from one screen.</p>
+            </div>
+            <div class="case__block">
+              <h4>Tech Stack</h4>
+              <ul class="case__stack">
+                <li><b>Backend</b> Java, Spring Boot, JPA</li>
+                <li><b>Frontend</b> HTML5, CSS, JavaScript</li>
+                <li><b>Architecture</b> Layered: Controller · Service · Repository · Domain · DTO</li>
+                <li><b>Auth</b> Spring Security alongside a cookie-token flow (the promo site and student portal share one member account)</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>Key Features</h4>
+              <ul class="case__features">
+                <li>QR attendance — the admin issues a QR, students scan to check in; the server only allows it from 10 minutes before class to 1 hour after</li>
+                <li>Payment guidance &amp; receipts — color-coded Unpaid / Confirmation Requested / Paid states, plus a printable receipt (save as PDF) after confirmation</li>
+                <li>Automated notifications — a scheduler sends class reminders and birthday greetings daily, with no duplicates within the same year</li>
+                <li>Teacher–student 1:1 messaging — new-message alerts, unread indicators, and a per-student conversation list with replies in the admin panel</li>
+                <li>Video viewing status — records when a student opens a video; the admin sees view counts and the list of students per material</li>
+              </ul>
+            </div>
+            <div class="case__block">
+              <h4>Problem Solving</h4>
+              <p>I noticed the attendance QR was rendering blank, traced it to a wrong URL for the externally
+              hosted QR library, and fixed it by bundling the library inside the project so it works
+              regardless of network conditions. I also linked two screens with different login flows to
+              share one member account, and recorded the last-sent year so birthday notifications never
+              repeat within a year — designing for problems that would come up in real operation. Along the
+              way I learned the full-stack mindset that adding one screen means designing the entity, DTO,
+              API, admin view, and notification together.</p>
             </div>
           </div>
         </div>
